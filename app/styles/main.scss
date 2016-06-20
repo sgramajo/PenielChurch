@@ -13,7 +13,6 @@ $icon-font-path: '../fonts/';
 
 /* Space out content a bit */
 body {
-  padding-top: 20px;
   padding-bottom: 20px;
 }
 
@@ -23,6 +22,10 @@ body {
 .footer {
   padding-left: 15px;
   padding-right: 15px;
+}
+/* Navbar css*/
+.navbar-nav > li > a {
+  border-radius: 10px;
 }
 
 /* Custom page header */
@@ -67,12 +70,6 @@ body {
   }
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-
   /* Remove the padding we set earlier */
   .header,
   .marketing,
@@ -90,4 +87,3 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
-}

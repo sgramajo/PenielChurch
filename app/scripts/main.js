@@ -7,3 +7,11 @@ app.directive("navbar", function(){
       transclude: true,
       templateUrl: "../navbar.html"
 }});
+
+app.directive("footer", function(){
+    return {
+      restrict: 'E',
+      replace: true,
+      transclude: true,
+      templateUrl: "../footer.html"
+}});

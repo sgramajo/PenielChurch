@@ -1,0 +1,356 @@
+.list_event_details{
+  right: 17rem;
+  width: 15rem;
+  margin: 1.7rem 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  padding-left: 1.5rem ;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  color: white;
+  font-size: 15px;
+}
+.list_event_location{
+  right: 1rem;
+  width: 15rem;
+  margin: 1.7rem 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  padding-left: 1.5rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.list_event_location_content{
+  margin-left: 2rem;
+  font-size: 0.8667rem;
+  line-height: 1.6;
+}
+.list_item_content{
+  font-size: 1.667rem;
+  display: table-cell;
+  vertical-align: middle;
+  height: 4rem;
+  padding: 1rem 0;
+}
+.list_title{
+  line-height: 1.1;
+  white-space: initial;
+  padding-left: 12px;
+  height: 4rem;
+  display: table-cell;
+  vertical-align: middle;
+}
+.footer_new_desc{
+  margin-right: 0.5em;
+  display: inline-block;
+  color: white;
+  text-align: left;
+  line-height: 1.3em;
+  text-transform: none;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 400;
+}
+.footer_btn{
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  padding: 18.662px 39px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+.new_group{
+  padding-top: 37.8px;
+  padding-bottom: 37.8px;
+}
+.footer_btn:hover{
+  color: #ff6a48;
+  background-color: white;
+  border-color: rgba(255, 106, 72, 0.4):
+}
+.footer_h4{
+  color: white;
+  font-size: 1.7857em;
+  font-weight: 400;
+  line-height: 20px;
+}
+.new_group{
+  background-color: #ff6a48;
+}
+.background_image_row{
+  position: relative;
+  box-sizing: border-box;
+  margin-top: 7% !important;
+  margin-bottom: 7% !important;
+  padding-top: 7% !important;
+  padding-bottom: 7% !important;
+  background-size: cover;
+  color: white;
+}
+#threeSummary{
+  background-image: url(http://gracechurch.ancorathemes.com/wp-content/uploads/2015/08/bg1.jpg?id=320) !important;
+}
+.icon-book-open{
+  color: white;
+  float: none;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  transition: all ease .3s;
+  -webkit-transition: all ease .3s;
+  -moz-transition: all ease .3s;
+  -ms-transition: all ease .3s;
+  -o-transition: all ease .3s;
+  font-size: 1.5rem;
+}
+.more_button{
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  padding: 4.5528px 17.073px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+}
+.testing{
+  background-color: red;
+}
+
+div.pics img{
+  margin: auto;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+  h4.item_title{
+  display: inline-block;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.1em;
+  font-weight: 400;
+}
+.item_description > p {
+  font-size: 14px;
+  font-family: Montserrat, sans-serif;
+  word-wrap: break-word;
+  font-weight: 600;
+  margin-bottom: 2em;
+}
+.page_content{
+  padding: 0;
+}
+.content{
+  box-sizing: border-box;
+}
+div{
+  display: block;
+}
+.summary{
+  background-size: cover;
+  margin-top: 6%  !important;
+  margin: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+img{
+  max-width: 100%;
+  vertical-align: top;
+}
+.image{
+  margin: auto;
+  position: relative;
+}
+.page_wrap{
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .page_wrap{
+    width: 600px;
+  }
+}
+.margin_left{
+  margin-left: 0;
+}
+
+h6{
+  display: block;
+  border: 0;
+  outline: 0;
+  word-wrap: break-word;
+  text-align: left;
+  line-height: 1.1em;
+  font-weight: 700;
+  margin-top: 1.35em;
+  font-size: 12px !important;
+  margin-bottom: 0.75em;
+}
+.section{
+  position: relative;
+  padding: 1px 0;
+}
+.section_inner{
+  color: #9fa0a3;
+}
+.title_regular{
+  font-size: 32.004px;
+  word-wrap: break-word;
+}
+.paragraph{
+  font-size: 12px;
+}
+.button{
+  color: white;
+  font-size: 12px;
+  line-height: 12.6828px;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 17px;
+  border-radius: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  background-color: indianred;
+}
+.button:hover{
+  background-color: #ff9279;
+}
+h1, h2, h3, h6{
+  text-transform: uppercase;
+}
+.title{
+  color: #3b3b42;
+  overflow: hidden;
+  position: relative;
+}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, em, font,
+small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, input, textarea, button, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, address, section, video, audio {
+  font-size: 100%;
+}
+#movieSection {
+  padding-bottom: 15em;
+  color: white;
+  background-color: black;
+}
+.title_divider{
+  position: relative;
+  padding-left: 15px;
+}
+a {
+  color: inherit;
+}
+ul{
+  margin-bottom: 1.5em;
+}
+.border-box{
+  border-color: rgba(244, 244, 244, 0.3) !important;
+  border: 3px solid;
+  min-height: 6rem;
+  margin-bottom: 2rem;
+  padding-right: 35rem !important;
+  margin-left: 7rem;
+  position: relative;
+}
+div.list_event_date_start{
+  position: absolute;
+  margin: auto;
+  border-color: indianred;
+  background-color: indianred;
+}
+.position_date{
+  height: 3rem;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+}
+div.list_event_date_start{
+  width: 6.1rem;
+  text-align: center;
+  top: -3px;
+  bottom: -3px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.position_date .day, .position_date .month_year{
+  color: white;
+}
+.month_year{
+  font-size: 0.6667rem;
+}
+div.list_event_date_start .position_date .day{
+  font-size: 2.667rem;
+  display: block;
+}
+.list_style_iconed li{
+  list-style: none;
+  position: relative;
+  line-height: 1.8em;
+}
+body{
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.8em;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.title_divider_before, .title_divider_after{
+  display: block;
+  height: 3px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 2.6rem;
+}
+.responsive_text{
+  font-size: 2rem !important;
+}
+h4{
+  line-height: 1.1em;
+  font-weight: 400;
+}
+.image_customized{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+div.pics > div{
+  height: 260px;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+  div.pics > div{
+    margin-bottom: 0;
+  }
+}
+#image_two{
+  background-image: url("../images/pastorDanny.jpg");
+}
+#image_three{
+  background-image: url("../images/pink.jpg");
+}
+#image_four{
+  background-image: url("../images/bible.jpg");
+}
+#image_five{
+  background-image: url("../images/red.jpg");
+}
+
+#events{
+  background-image: url(https://images.unsplash.com/photo-1440688807730-73e4e2169fb8?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1669&h=1114&q=80) !important;
+  transition: opacity 0.5s ease;
+}

@@ -8,13 +8,13 @@
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" type="image/ico" href="images/favicon.ico" />
-
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/index.css">
     <!-- endbuild -->
 
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -25,36 +25,142 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-    <div class="container">
-      <navbar></navbar>
-      <div class="jumbotron">
-        <h1>'Allo, 'Allo!</h1>
-        <p class="lead">Always a pleasure scaffolding your apps.</p>
-        <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
+    <div class="row" id="movieSection">
+      <div class="container">
+        <navbar></navbar>
       </div>
-
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>HTML5 Boilerplate</h4>
-          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-
-          <h4>Sass</h4>
-          <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
-
-          <h4>Bootstrap</h4>
-          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-          <h4>Modernizr</h4>
-          <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-
+    </div>
+    <!-- Summary -->
+    <div class="page_wrap">
+      <div class="container">
+        <div class="content">
+          <div class="summary col-sm-7">
+            <div class="section margin_left">
+              <div class="section_inner">
+                <h4 class="title title_regular align_left responsive_text" style="margin-top:0px;margin-bottom: 1.5rem;text-align:left;font-size: 2.667rem;">
+                  Peniel Christian Church
+                </h4>
+                <div class="text_column content_element">
+                  <div class="wrapper">
+                    <div class="paragraph" style="margin-bottom:1em">
+                      Peniel Christian Church is a united church focused on spreading the Gospel of Jesus Christ to the nations. We are united under one vision-REVIVAL-alongside our senior pastors, Dr.Luis Lopez and Dr. Marta Lopez.
+                    </div>
+                    <div class="paragraph">
+                      La Iglesia Cristiana Peniel es una iglesia unida enfocada en el Evangelio de Jesuscristo. Estamos unidos bajo una visionunica-AVIVAMIENTO-junto a nuestros pastroes principales, Dr.Luis Lopez y Dra.Marta Lopez.
+                    </div>
+                  </div>
+                </div>
+                <a style="margin-top:1.2rem;" class="button button_square">More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <div class="wrapper margin_left image" style="margin-top:1.35rem !important">
+              <img src="/images/DSC_5515.jpg" alt="" style="margin-top: 10%">
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="footer">
-        <p>♥ from the Yeoman team</p>
+      <!-- Events -->
+      <div id="events" class="row background_image_row">
+        <div class="container">
+          <div class="col-sm-12">
+            <div class="page_wrap">
+              <h6 class="title margin_left">Upcoming Events</h6>
+            </div>
+          </div>
+
+          <div class="col-sm-12">
+            <ul class="list list_style_iconed">
+              <li class="list_item event_item">
+                <div class="list_event_date_start">
+                  <div class="position_date">
+                    <span class="day">12</span>
+                    <span class="month_year">Apr '16</span>
+                  </div>
+                </div>
+                <div class="border-box">
+                  <div class="list_event_details visible-md-block visible-lg-block">
+                    <span class="icon-clock list-icon"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> Tuesday @ 8am</span>
+                  </div>
+                  <div class="list_event_location visible-md-block visible-lg-block">
+                    <span class="list_icon icon_location"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></span>
+                    <div class="list_event_location_content"></div>
+                  </div>
+                  <div class="list_item_content">
+                    <span class="list_title">Developing A Spritual Mentality</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-bottom:8em;">
+        <div class="container">
+          <div class="col-sm-12">
+            <h6 class="title title_divider" style="margin-bottom:3.125rem; ">
+              <span class="title_divider_before"></span>
+              From the Gallery
+              <span class="title_divider_after"></span>
+            </h6>
+          </div>
+          <div class="col-sm-12">
+            <div class="col-sm-6 pics">
+              <div id="image_two" class="image_customized"></div>
+              <div id="image_three" class="image_customized"></div>
+            </div>
+            <div class="col-sm-6 pics">
+              <div id="image_four" class="image_customized"></div>
+              <div id="image_five" class="image_customized"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Joing Group -->
+    <div class="new_group row">
+      <div class="container">
+        <div class="col-md-8">
+          <div style="display: inline-block; ">
+            <img alt="plus_icon" src="http://gracechurch.ancorathemes.com/wp-content/uploads/2015/08/Call-to-action-icon.png" />
+          </div>
+          <div style="display:inline-table; margin-left: 20px; ">
+            <h4 class="footer_h4">New Here?</h4>
+            <div class="footer_new_desc">Find out how, where and when we worship. We hope to see you soon!</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <button type="button" class="btn footer_btn">Join a Group</button>
+        </div>
       </div>
     </div>
 
+    <!-- Mobile Phone -->
+    <div class="row">
+      <div class="container">
+        <div class="col-sm-12">
+          <h6 class="title title_divider" style="margin-bottom:3.125rem; ">
+            <span class="title_divider_before"></span>
+            Peniel's App
+            <span class="title_divider_after"></span>
+          </h6>
+        </div>
+        <div id="authorize-div">
+          <button class="btn"  onclick="handleAuthClick(event)">Authorize</button>
+        </div>
+        <div id="output"></div>
+      </div>
+    </div>
+  </div>
+
+    <div class="col-md-12">
+      <div class="container">
+        <footer></footer>
+      </div>
+    </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -89,6 +195,8 @@
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <script src="scripts/calendarAPI.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
     <!-- endbuild -->
   </body>
 </html>
