@@ -1,0 +1,71 @@
+#small-groups{
+   background: url("../images/small-groups.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 55px;
+    padding-bottom: 55px;  
+}
+.pSmall{
+    color: white;
+    font-size: 19px;
+    text-align: center; 
+    margin-bottom: 30px; 
+}
+#pastors{
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+.pastorImage {
+    height: 200px; 
+}
+figure > img{
+    width: 300px; 
+    display: block;
+    margin: 0 auto;
+}
+figure{
+    display: inline-table;
+    margin-bottom: 50px; 
+}
+figcaption{
+    text-align: center; 
+    margin-top: 10px; 
+}
+div figure{
+    padding-left: 50px;  /* applies to every figure*/
+}
+
+div figure:first-child {
+    padding-left: 0px; /* limits the scope of the previous rule */
+}
+#information{
+  padding-top: 37.8px;
+  padding-bottom: 37.8px;
+  background-color: indianred;
+}
+.footer_new_desc{
+    color: white !important;  
+    text-decoration: none; 
+}
+#gc-number-0
+{
+    color: white;
+    text-decoration: none; 
+}
+.time{
+    color: white;
+    float: right; 
+}
+.alignleft{
+    float: left; 
+}
+.clear{
+    clear: both; 
+}
+.fullBg {
+    top: 0;
+    left: 0;
+    width: 100%; 
+}

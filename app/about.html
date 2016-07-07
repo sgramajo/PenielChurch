@@ -1,0 +1,169 @@
+<!doctype html>
+<html ng-app="website">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About</title>
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/ico" href="images/favicon.ico" />
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+    <body ng-controller="MainCtrl">
+        <navbar></navbar>
+        <!--SlideShow -->
+        <div class="row">
+          <div class="col-xs-12" ng-if="progress !== 100">
+              <progressbar class="progress-striped" value="progress">{{progress | number:0}}%</progressbar>
+          </div>
+          <img ng-show="loaded" bg-image class="fullBg {{currentAnimation}}" ng-repeat="slide in slides"
+              ng-if="isCurrentSlideIndex($index)"
+              ng-src="{{slide.src}}">
+        </div>
+    
+        <!-- Vision / Mission -->
+        <div class="row" id="verse">
+          <div class="container">
+          </div>
+        </div>
+
+        <!-- pictures of the pastors -->
+        <div id="pastors" class="row">
+          <div class="container">
+            <div class="col-md-12">
+              <h4 class="title title_regular responsive_text" style="margin-bottom: 50px;color:grey;text-align:center;">
+                    Meet the Pastors
+              </h4>
+            </div>
+            <figure class="figure col-sm-4">
+              <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22300%22%20viewBox%3D%220%200%20400%20300%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F400x300%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_15594867807%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A20pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15594867807%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22148.859375%22%20y%3D%22159%22%3E400x300%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" class="figure-img img-fluid img-rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+              <figcaption class="figure-caption">Senior Pastor Luis and Pastora Marta</figcaption>
+            </figure>
+            <figure class="figure col-sm-4">
+              <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22300%22%20viewBox%3D%220%200%20400%20300%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F400x300%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_15594867807%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A20pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15594867807%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22148.859375%22%20y%3D%22159%22%3E400x300%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" class="figure-img img-fluid img-rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+              <figcaption class="figure-caption">Co-Pastor Joel and Pastora Francis</figcaption>
+            </figure>
+            <figure class="figure col-sm-4">
+              <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22300%22%20viewBox%3D%220%200%20400%20300%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F400x300%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_15594867807%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A20pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15594867807%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22148.859375%22%20y%3D%22159%22%3E400x300%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" class="figure-img img-fluid img-rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+              <figcaption class="figure-caption">Pastor Issac and Pastora Kelly</figcaption>
+            </figure>
+            <figure class="figure col-sm-4">
+              <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22300%22%20viewBox%3D%220%200%20400%20300%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F400x300%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_15594867807%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A20pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15594867807%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22148.859375%22%20y%3D%22159%22%3E400x300%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" class="figure-img img-fluid img-rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+              <figcaption class="figure-caption">Pastor Kelvin and Pastora Daphne</figcaption>
+            </figure>
+            <figure class="figure col-sm-4">
+              <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22300%22%20viewBox%3D%220%200%20400%20300%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F400x300%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_15594867807%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A20pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15594867807%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22148.859375%22%20y%3D%22159%22%3E400x300%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" class="figure-img img-fluid img-rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+              <figcaption class="figure-caption">Youthg Pastor Danny and Pastora Jennifer</figcaption>
+            </figure>
+            <figure class="figure col-sm-4">
+              <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22300%22%20viewBox%3D%220%200%20400%20300%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F400x300%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_15594867807%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A20pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15594867807%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22148.859375%22%20y%3D%22159%22%3E400x300%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" class="figure-img img-fluid img-rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+              <figcaption class="figure-caption">Pastor Natasha and Pastora James</figcaption>
+            </figure>
+          </div>
+        </div>
+        
+        <!-- Small Groups -->
+        <div class="row" id="small-groups">
+          <div style="background: rgba(0, 0, 0, 0.6); padding: 40px 0; ">
+            <div class="container">
+              <div class="col-md-offset-6">
+                <h4 class="title title_regular responsive_text" style="margin-bottom: 25px;color:white;text-align:center;">
+                      Small Groups
+                </h4>
+              </div>
+              <div class="pSmall col-md-offset-6">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+              </div>
+              <div class="col-md-offset-6" style="text-align: center; ">
+                <a target="_blank" href="https://pushpay.com/pay/penielchristianchurch/_pwyNHDRmDJVkAk_E_Qjmw"><button type="button" class="btn footer_btn">Learn More</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Church Information -->
+        <div class="row" id="information">
+          <div class="container">
+            <div class="col-md-8">
+              <div style="display: inline-block; ">
+                <span class="glyphicon glyphicon-map-marker" style="font-size: 33px; color: white; "><span />
+              </div>
+              <div style="display:inline-table; margin-left: 20px; ">
+                <h4 class="footer_h4">5301 Goddard Ave, Orlando, FL</h4>
+                <div class="footer_new_desc">(407) 583-9027</div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <p class="alignleft"><b>Tuesday:</b></p> <p class="time">7:00pm - 8:00pm</p><div class="clear"></div>
+              <p class="alignleft"><b>Wednesday:</b></p> <p class="time">7:30pm - 9:30pm</p><div class="clear"></div>
+              <p class="alignleft"><b>Friday:</b></p> <p class="time">7:00pm - 9:30pm</p><div class="clear"></div>
+              <p class="alignleft"><b>Sunday:</b></p> <p class="time">11:00am - 1:30pm</p><div class="clear"></div>
+            </div>
+          </div>
+        </div>
+
+        <footer></footer>
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="/bower_components/jquery/dist/jquery.js"></script>
+        <script src="/bower_components/angular/angular.js"></script>
+        <script src="/bower_components/angular-animate/angular-animate.js"></script>
+        <script src="/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenMax.min.js"></script>
+        <script src="http://code.createjs.com/preloadjs-0.4.1.min.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js scripts/plugins.js -->
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/slideshow.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>
+    <!--Gallery -->
+    <!--<div class="row" style="padding:8em 0;">
+      <div class="container">
+        <div class="col-sm-12">
+ 	        <h4 class="title title_regular align_left responsive_text" style="margin-top:0px;margin-bottom: 1.5rem;text-align:left;font-size: 2.667rem;">
+               Photos/Fotos
+          </h4>
+        </div>
+        <div class="col-sm-12">
+          <div class="col-sm-6 pics">
+            <div id="image_two" class="image_customized"></div>
+            <div id="image_three" class="image_customized"></div>
+          </div>
+          <div class="col-sm-6 pics">
+            <div id="image_four" class="image_customized"></div>
+            <div id="image_five" class="image_customized"></div>
+          </div>
+        </div>
+      </div>
+    </div> -->

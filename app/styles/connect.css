@@ -1,0 +1,21 @@
+.side{
+    padding-top: 10px;
+    border-top: black 2px solid; 
+}
+#ministriesGroups{
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+#smallGroups{
+   padding-top: 65px;
+   padding-bottom: 65px; 
+}
+#freeSection{
+    background: url("https://images.unsplash.com/photo-1418225162054-0f773a996f9e?dpr=1&auto=format&crop=entropy&fit=crop&w=1920&h=1268&q=80") center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 125px;
+    padding-bottom: 125px;
+    font-size: 20px; 
+    text-align: center; 
+}

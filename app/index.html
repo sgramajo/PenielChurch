@@ -25,101 +25,93 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="row" id="movieSection">
-      <div class="container">
-        <navbar></navbar>
-      </div>
+    <navbar></navbar>
+    <div class="row">
+        <div class="header-container">
+          <div class="video-container">
+            <video muted autoplay class="embed-responsive-item">
+              <source src=video/PenielChurch2.mp4 type=video/mp4></source>
+            </video>
+          </div>
+        </div>
     </div>
     <!-- Summary -->
-    <div class="page_wrap">
+    <div class="row">
       <div class="container">
-        <div class="content">
-          <div class="summary col-sm-7">
-            <div class="section margin_left">
-              <div class="section_inner">
-                <h4 class="title title_regular align_left responsive_text" style="margin-top:0px;margin-bottom: 1.5rem;text-align:left;font-size: 2.667rem;">
-                  Peniel Christian Church
-                </h4>
-                <div class="text_column content_element">
-                  <div class="wrapper">
-                    <div class="paragraph" style="margin-bottom:1em">
-                      Peniel Christian Church is a united church focused on spreading the Gospel of Jesus Christ to the nations. We are united under one vision-REVIVAL-alongside our senior pastors, Dr.Luis Lopez and Dr. Marta Lopez.
-                    </div>
-                    <div class="paragraph">
-                      La Iglesia Cristiana Peniel es una iglesia unida enfocada en el Evangelio de Jesuscristo. Estamos unidos bajo una visionunica-AVIVAMIENTO-junto a nuestros pastroes principales, Dr.Luis Lopez y Dra.Marta Lopez.
-                    </div>
+        <div class="summary col-sm-7">
+          <div class="section margin_left">
+            <div class="section_inner">
+              <h4 class="title title_regular align_left responsive_text" style="margin-top:0px;margin-bottom: 1.5rem;text-align:left;font-size: 2.667rem;">
+                Peniel Christian Church
+              </h4>
+              <div class="text_column content_element">
+                <div class="wrapper">
+                  <div class="paragraph" style="margin-bottom:1em">
+                    Peniel Christian Church is a united church focused on spreading the Gospel of Jesus Christ to the nations. We are united under one vision-REVIVAL-alongside our senior pastors, Dr.Luis Lopez and Dr. Marta Lopez.
+                  </div>
+                  <div class="paragraph">
+                    La Iglesia Cristiana Peniel es una iglesia unida enfocada en el Evangelio de Jesuscristo. Estamos unidos bajo una visionunica-AVIVAMIENTO-junto a nuestros pastroes principales, Dr.Luis Lopez y Dra.Marta Lopez.
                   </div>
                 </div>
-                <a style="margin-top:1.2rem;" class="button button_square">More</a>
               </div>
-            </div>
-          </div>
-          <div class="col-sm-5">
-            <div class="wrapper margin_left image" style="margin-top:1.35rem !important">
-              <img src="/images/DSC_5515.jpg" alt="" style="margin-top: 10%">
+              <a style="margin-top:1.2rem;" class="button button_square">More</a>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Events -->
-      <div id="events" class="row background_image_row">
-        <div class="container">
-          <div class="col-sm-12">
-            <div class="page_wrap">
-              <h6 class="title margin_left">Upcoming Events</h6>
-            </div>
+        <div class="col-sm-5">
+          <div class="wrapper margin_left image" style="margin-top:1.35rem !important">
+            <img src="/images/DSC_5515.jpg" alt="" style="margin-top: 10%">
           </div>
-
-          <div class="col-sm-12">
-            <ul class="list list_style_iconed">
-              <li class="list_item event_item">
-                <div class="list_event_date_start">
-                  <div class="position_date">
-                    <span class="day">12</span>
-                    <span class="month_year">Apr '16</span>
-                  </div>
+        </div>
+      </div>
+    </div>
+    <!-- Events -->
+    <div id="events" class="row background_image_row" ng-controller="MainCtrl">
+      <div class="container">
+        <div class="col-sm-12">
+ 	        <h4 class="title title_regular align_left responsive_text" style="margin-top:0px;margin-bottom: 1.5rem;color:white;text-align:left;font-size: 2.667rem;">
+                Upcoming Events
+          </h4>
+        </div>
+        <div class="col-sm-12" ng-repeat="x in myData|limitTo:5">
+          <ul class="list list_style_iconed">
+            <li class="list_item event_item">
+              <div class="list_event_date_start">
+                <div class="position_date">
+                  <span class="day">{{x.start.dateTime | date: "d"}}</span>
+                  <span class="month_year">{{x.start.dateTime | date: "MMM"}} '{{x.start.dateTime | date: "yy"}}</span>
                 </div>
-                <div class="border-box">
-                  <div class="list_event_details visible-md-block visible-lg-block">
-                    <span class="icon-clock list-icon"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> Tuesday @ 8am</span>
-                  </div>
-                  <div class="list_event_location visible-md-block visible-lg-block">
-                    <span class="list_icon icon_location"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></span>
-                    <div class="list_event_location_content"></div>
-                  </div>
-                  <div class="list_item_content">
-                    <span class="list_title">Developing A Spritual Mentality</span>
-                  </div>
+              </div>
+              <div class="border-box">
+                <div class="list_event_details visible-md-block visible-lg-block">
+                  <span class="icon-clock list-icon"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{x.start.dateTime | date: "EEEE @ h a"}}</span>
                 </div>
-              </li>
-            </ul>
-          </div>
+                <div class="list_item_content">
+                  <span class="list_title">{{x.summary}}</span>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
+    </div> 
 
-      <div class="row" style="margin-bottom:8em;">
-        <div class="container">
-          <div class="col-sm-12">
-            <h6 class="title title_divider" style="margin-bottom:3.125rem; ">
-              <span class="title_divider_before"></span>
-              From the Gallery
-              <span class="title_divider_after"></span>
-            </h6>
-          </div>
-          <div class="col-sm-12">
-            <div class="col-sm-6 pics">
-              <div id="image_two" class="image_customized"></div>
-              <div id="image_three" class="image_customized"></div>
-            </div>
-            <div class="col-sm-6 pics">
-              <div id="image_four" class="image_customized"></div>
-              <div id="image_five" class="image_customized"></div>
-            </div>
-          </div>
+    <!--Giving -->
+    <div id="giving" class="row">
+      <div class="container">
+        <div class="col-sm-12">
+          <h4 class="title title_regular align_left responsive_text" style="margin-bottom: 40px;color:white;text-align:center;">
+                Online Giving
+          </h4>
+        </div>
+        <div class="giving-wording"><i>“Bring the whole tithe into the store house, that there may be food in my house. <br />Test me in this,” says the Lord Almighty…” (Malachi 3: 10)</i></div>
+        <div class="giving-wording">Thank you for your generosity.  Please note that all donations to the Church are voluntary and nonrefundable. <br /> You may contact us for any inquires.</div>
+        <div style="text-align: center; ">
+          <a target="_blank" href="https://pushpay.com/pay/penielchristianchurch/_pwyNHDRmDJVkAk_E_Qjmw"><button type="button" class="btn footer_btn">Give Now</button></a>
         </div>
       </div>
-
+    </div>
+   
     <!-- Joing Group -->
     <div class="new_group row">
       <div class="container">
@@ -138,29 +130,7 @@
       </div>
     </div>
 
-    <!-- Mobile Phone -->
-    <div class="row">
-      <div class="container">
-        <div class="col-sm-12">
-          <h6 class="title title_divider" style="margin-bottom:3.125rem; ">
-            <span class="title_divider_before"></span>
-            Peniel's App
-            <span class="title_divider_after"></span>
-          </h6>
-        </div>
-        <div id="authorize-div">
-          <button class="btn"  onclick="handleAuthClick(event)">Authorize</button>
-        </div>
-        <div id="output"></div>
-      </div>
-    </div>
-  </div>
-
-    <div class="col-md-12">
-      <div class="container">
-        <footer></footer>
-      </div>
-    </div>
+    <footer></footer>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -195,8 +165,6 @@
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
-    <script src="scripts/calendarAPI.js"></script>
-    <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
     <!-- endbuild -->
   </body>
 </html>

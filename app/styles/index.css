@@ -1,14 +1,13 @@
 .list_event_details{
-  right: 17rem;
-  width: 15rem;
-  margin: 1.7rem 0;
+  left: 30rem;
+  margin: 2rem 0;
   border-left: 1px solid rgba(255, 255, 255, 0.3);
   padding-left: 1.5rem ;
   position: absolute;
   top: 0;
   bottom: 0;
   color: white;
-  font-size: 15px;
+  font-size: 18px;
 }
 .list_event_location{
   right: 1rem;
@@ -40,6 +39,11 @@
   display: table-cell;
   vertical-align: middle;
 }
+@media (min-width: 768px){
+  .navbar-right{
+    margin-left: 43%;
+  }
+}
 .footer_new_desc{
   margin-right: 0.5em;
   display: inline-block;
@@ -63,11 +67,15 @@
 .new_group{
   padding-top: 37.8px;
   padding-bottom: 37.8px;
+  background-color: indianred;
 }
-.footer_btn:hover{
+.col-md-4 > .footer_btn:hover{
   color: #ff6a48;
   background-color: white;
-  border-color: rgba(255, 106, 72, 0.4):
+}
+.footer_btn:hover{
+  color: gray;
+  background-color: white;
 }
 .footer_h4{
   color: white;
@@ -75,14 +83,15 @@
   font-weight: 400;
   line-height: 20px;
 }
-.new_group{
-  background-color: #ff6a48;
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus
+{
+  background-color: transparent;
+  border: white 2px solid; 
 }
 .background_image_row{
   position: relative;
   box-sizing: border-box;
   margin-top: 7% !important;
-  margin-bottom: 7% !important;
   padding-top: 7% !important;
   padding-bottom: 7% !important;
   background-size: cover;
@@ -113,10 +122,6 @@
   font-family: Montserrat, sans-serif;
   font-weight: 600;
 }
-.testing{
-  background-color: red;
-}
-
 div.pics img{
   margin: auto;
   width: 100%;
@@ -155,35 +160,14 @@ div{
 }
 img{
   max-width: 100%;
-  vertical-align: top;
+  vertical-align: bottom;
+}
+.footer-img{
+  margin-right: 7px; 
 }
 .image{
   margin: auto;
   position: relative;
-}
-.page_wrap{
-  margin: 0 auto;
-}
-@media (max-width: 768px) {
-  .page_wrap{
-    width: 600px;
-  }
-}
-.margin_left{
-  margin-left: 0;
-}
-
-h6{
-  display: block;
-  border: 0;
-  outline: 0;
-  word-wrap: break-word;
-  text-align: left;
-  line-height: 1.1em;
-  font-weight: 700;
-  margin-top: 1.35em;
-  font-size: 12px !important;
-  margin-bottom: 0.75em;
 }
 .section{
   position: relative;
@@ -197,17 +181,16 @@ h6{
   word-wrap: break-word;
 }
 .paragraph{
-  font-size: 12px;
+  font-size: 17px;
 }
 .button{
   color: white;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 12.6828px;
   display: inline-block;
   text-align: center;
   padding: 10px 17px;
   border-radius: 3px;
-  font-weight: 700;
   text-transform: uppercase;
   border: none;
   background-color: indianred;
@@ -230,15 +213,31 @@ form, label, legend, input, textarea, button, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside, address, section, video, audio {
   font-size: 100%;
 }
-#movieSection {
-  padding-bottom: 15em;
-  color: white;
-  background-color: black;
-}
-.title_divider{
+/* video css */
+.header-container
+{
+  width: 100%;
+  border-left: none;
+  border-right: none;
   position: relative;
-  padding-left: 15px;
+  padding: 20px;
 }
+.video-container
+{
+  position: absolute;
+  top: 0%;
+  left:0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+video
+{
+  position: absolute;
+  z-index: -1;
+  width: 100%; 
+}
+
 a {
   color: inherit;
 }
@@ -305,15 +304,7 @@ html, body{
   width: 100%;
   height: 100%;
 }
-.title_divider_before, .title_divider_after{
-  display: block;
-  height: 3px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  width: 2.6rem;
-}
+
 .responsive_text{
   font-size: 2rem !important;
 }
@@ -330,6 +321,54 @@ h4{
 div.pics > div{
   height: 260px;
   margin-bottom: 25px;
+}
+.container:before, .container:after{
+  display: table-row; 
+}
+.navbar-default{
+  background-color: rgba(0, 0, 0, 0.7);
+  border-color: transparent;
+  padding-top: 12px;
+  padding-bottom: 12px;  
+}
+#giving
+{
+  padding: 60px 0; 
+  background-image: url("/images/oceanPhoto.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+.navbar-brand, .navbar-default, .navbar-default .navbar-nav > li > a{
+  font-size: 23px;
+  color:white; 
+}
+.giving-wording{
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  text-shadow: 1px 1px gray;
+  margin-bottom: 60px;  
+}
+@media (max-width: 681px) {
+  .header-container{
+    height: 400px; 
+  }
+}
+@media (min-width: 991px) {
+  .header-container{
+    height: 590px; 
+  }
+}
+
+@media (min-width: 992px) {
+  .header-container{
+    height: 800px; 
+  }
+}
+@media (min-width: 1499px) {
+  .header-container{
+    height: 950px; 
+  }
 }
 
 @media (max-width: 768px) {
@@ -351,6 +390,6 @@ div.pics > div{
 }
 
 #events{
-  background-image: url(https://images.unsplash.com/photo-1440688807730-73e4e2169fb8?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1669&h=1114&q=80) !important;
+  background-image: url(https://images.unsplash.com/photo-1466059163810-56070e5d9e8a?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1920&h=1280&q=80) !important;
   transition: opacity 0.5s ease;
 }
