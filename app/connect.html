@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="website">
+<html ng-app="mwl.calendar.docs">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
@@ -35,7 +35,40 @@
         <!-- Calendar -->
         <div class="row" id="calendar">
             <div class="container">
+                <div ng-controller="KitchenSinkCtrl as vm">
+                    <h2 class="text-center">{{ vm.calendarTitle }}</h2>
+                    <div class="row">
+                        <div class="col-md-6 text-center">
+                            <div class="btn-group">
+                                <button class="btn btn-primary" mwl-date-modifier date="vm.viewDate" decrement="vm.calendarView">Previous</button>
+                                <button class="btn btn-default" mwl-date-modifier date="vm.viewDate" set-to-today>Today</button>
+                                <button class="btn btn-primary" mwl-date-modifier date="vm.viewDate" increment="vm.calendarView">Next</button>
+                            </div>
+                        </div>
 
+                        <br class="visible-xs visible-sm">
+                        <div class="col-md-6 text-center">
+                            <div class="btn-group">
+                                <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'year'">Year</label>
+                                <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'month'">Month</label>
+                                <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'week'">Week</label>
+                                <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'day'">Day</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <br>
+                    <mwl-calendar
+                        events="vm.events"
+                        view="vm.calendarView"
+                        view-title="vm.calendarTitle"
+                        view-date="vm.viewDate"
+                        cell-is-open="vm.isCellOpen"
+                        day-view-start="06:00"
+                        day-view-end="22:00"
+                        day-view-split="30"
+                    </mwl-calendar>
+                </div>
             </div>
         </div>
 
@@ -105,11 +138,17 @@
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="/bower_components/jquery/dist/jquery.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.4/interact.min.js"></script>
         <script src="/bower_components/angular/angular.js"></script>
+        <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
         <script src="/bower_components/angular-animate/angular-animate.js"></script>
         <script src="/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenMax.min.js"></script>
         <script src="http://code.createjs.com/preloadjs-0.4.1.min.js"></script>
+        <script src="/bower_components/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.min.js"></script>
+        <link href="//mattlewis92.github.io/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.min.css" rel="stylesheet">
+
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -130,6 +169,7 @@
 
         <!-- build:js scripts/main.js -->
         <script src="scripts/slideshow.js"></script>
+        <script src="scripts/helper.js"></script>
         <!-- endbuild -->
     </body>
 </html>

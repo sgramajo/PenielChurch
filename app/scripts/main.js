@@ -9,7 +9,6 @@ app.controller('MainCtrl', function($scope, $http) {
     var apiKey = "AIzaSyDItVtuek3ZSj3vsafVOtHNfqMRmMD6Uk8";  
     var todayDate = new Date(); //Today Date
     var then = todayDate.getFullYear()+'-'+(todayDate.getMonth()+1)+'-'+todayDate.getDay(); 
-    var iframe = '<iframe src="https://calendar.google.com/calendar/embed?src=potsh8cvmjmjl0tcbqcahpuorc%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>';
     $http({
         method: 'GET',
         url: "https://www.googleapis.com/calendar/v3/calendars/" + calendarId + "/events?&timeMin=" + then + "T10%3A00%3A00-07%3A00&key=" + apiKey //maxResults=2500 -- add this before timeMin

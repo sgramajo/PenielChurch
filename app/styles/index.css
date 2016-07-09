@@ -64,6 +64,15 @@
   font-weight: bold;
   font-size: 18px;
 }
+.about_btn{
+  color: indianred;
+  border-color: indianred;
+  margin-top: 3em; 
+}
+.about_btn:hover{
+  color:white !important;
+  background-color: indianred !important;
+}
 .new_group{
   padding-top: 37.8px;
   padding-bottom: 37.8px;
@@ -182,6 +191,7 @@ img{
 }
 .paragraph{
   font-size: 17px;
+  text-align: center; 
 }
 .button{
   color: white;

@@ -1,4 +1,4 @@
-var app = angular.module('website', ['ngAnimate', 'ui.bootstrap']);
+var app = angular.module('mwl.calendar.docs', ['mwl.calendar', 'ngAnimate', 'ui.bootstrap', 'ui.bootstrap.tpls']);
 //https://github.com/simpulton/angularjs-greensock-slideshow/blob/master/images/image02.jpg
 app.directive("navbar", function(){
     return {
@@ -117,3 +117,49 @@ app.factory('QueueService', function($rootScope){
     }
 })
 
+
+app.controller('KitchenSinkCtrl',  function(moment, $scope, $http){
+    var vm = this;
+    vm.events = retrieveEvents(vm, $http); 
+ 
+    vm.calendarView = 'month';
+    vm.viewDate = new Date();
+    vm.isCellOpen = true;
+
+    vm.toggle = function($event, field, event) {
+      $event.preventDefault();
+      $event.stopPropagation();
+      event[field] = !event[field];
+    };
+});
+
+function retrieveEvents(vm, $http) {
+    var calendarId = "potsh8cvmjmjl0tcbqcahpuorc@group.calendar.google.com";
+    var apiKey = "AIzaSyDItVtuek3ZSj3vsafVOtHNfqMRmMD6Uk8";  
+    var todayDate = new Date(); //Today Date
+    var then = todayDate.getFullYear()+'-'+(todayDate.getMonth()+1)+'-'+todayDate.getDay();
+     vm.events = [];  
+    $http({
+        method: 'GET',
+        url: "https://www.googleapis.com/calendar/v3/calendars/" + calendarId + "/events?&timeMin=" + then + "T10%3A00%3A00-07%3A00&key=" + apiKey //maxResults=2500 -- add this before timeMin
+        }).then(function (response) {
+        var testing = angular.fromJson(response); 
+
+        angular.forEach(testing.data.items, function(value, key) {
+            var temp = (value.start && value.start.date)? value.start.date : (value.start && value.start.dateTime)? value.start.dateTime: null; 
+            temp = (temp != null)? new Date(temp): null;  
+            if(temp != null && todayDate < temp)                
+            {
+                vm.events.push({
+                    title: value.summary,
+                    type: 'info',
+                    startsAt: new Date(temp),
+                    endsAt: new Date((value.end && value.end.date)? value.end.date : (value.end && value.end.dateTime)? value.end.dateTime: null),
+                    draggable: false,
+                    resizable: false
+                });
+            }
+        });
+    });    
+    return vm.events; 
+}
