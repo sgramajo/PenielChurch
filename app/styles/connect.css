@@ -7,15 +7,65 @@
     padding-bottom: 55px;
 }
 #smallGroups{
+   background: url("https://images.unsplash.com/photo-1418225162054-0f773a996f9e?dpr=1&auto=format&crop=entropy&fit=crop&w=1920&h=1268&q=80") center center;
    padding-top: 65px;
    padding-bottom: 65px; 
 }
 #freeSection{
-    background: url("https://images.unsplash.com/photo-1418225162054-0f773a996f9e?dpr=1&auto=format&crop=entropy&fit=crop&w=1920&h=1268&q=80") center center;
+    background-color: indianred;
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 125px;
-    padding-bottom: 125px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     font-size: 20px; 
     text-align: center; 
+    color: white;
+}
+.ministry_section{
+    max-height: 30em;
+    height:30em; 
+    min-height: 30em; 
+}
+.soundMusic{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 0;
+}
+
+.ministryTitle{
+    margin-top: 2.5em;
+    color: indianred;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: x-large; 
+}
+
+html, body{
+    overflow-x: hidden;
+}
+.spacingMinistry{
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.even{
+    float:right;
+}
+#calendar{
+    margin-top: 3.5em;
+    margin-bottom: 6em;
+}
+h2{
+    font-size: xx-large;
+}
+.btn-primary, .btn-default{
+    border-color: #8F4040;
+    background-color: indianred;
+    padding: 15px 30px;
+}
+.btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle, .btn-primary:hover, .btn-default, .btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:active.focus, .btn-primary.active:hover, .btn-primary.active:focus, .btn-primary.active.focus, .open > .btn-primary.dropdown-toggle:hover, .open > .btn-primary.dropdown-toggle:focus, .open > .btn-primary.dropdown-toggle.focus, .btn-default:hover{
+    border-color: #8F4040;
+    background-color: white; 
+    color: indianred;
 }

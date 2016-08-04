@@ -16,8 +16,7 @@ app.directive("footer", function(){
       templateUrl: "../footer.html"
 }});
 
-app.controller('MainCtrl', function() {
-
-
-});
+app.controller('showhidecntr', function($scope, $window) {
+    $scope.hgt = $window.innerHeight;
+})
 

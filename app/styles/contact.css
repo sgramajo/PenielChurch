@@ -1,0 +1,38 @@
+#topPart{
+    background: url(https://images.unsplash.com/reserve/m6rT4MYFQ7CT8j9m2AEC_JakeGivens%20-%20Sunset%20in%20the%20Park.JPG?dpr=1&auto=format&crop=entropy&fit=crop&w=1920&h=1275&q=80) no-repeat center center;
+    width: 100%;  
+}
+#map {
+    height:450px;
+    width:100%;
+}
+#info{
+    text-align: center; 
+    padding-top: 7em;
+    padding-bottom: 7em;
+}
+.icons{
+    margin: 2em;
+}
+#gc-number-0{
+    color: black !important; 
+}
+.border{
+    border-top: lightgray solid 1px;
+    padding-top: 10px; 
+    border-bottom: lightgray solid 1px;
+    padding-bottom: 20px;
+}
+.center-div
+{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 600px;
+  border-radius: 3px;
+  height: 100px;
+  text-align: center;
+}

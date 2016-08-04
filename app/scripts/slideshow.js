@@ -19,15 +19,21 @@ app.directive("footer", function(){
 app.controller('MainCtrl', function ($scope, $timeout, QueueService) {
     var INTERVAL = 3000,
         slides = [{id:"image00", src:"./images/image00.jpg"},
-        {id:"image01", src:"../images/image01.jpg"},
-        {id:"image02", src:"../images/image02.jpg"}]; 
+        {id:"image01", src:"../images/vbs.jpg"}]; 
        
-    $scope.ministries = [{title:"Music / Musicos", description: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid             single-origin coffee nulla assumenda shoreditch et."},
-        {title:"Youth Ministry", description: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et."},
-        {title:"Sound Tech", description: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et."},
-        {title:"Kid's Ministry", description: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et."},
-        {title:"Men / Caballeros", description: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et."},
-        {title:"Women / Damas", description: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et."}];  
+    $scope.ministries = [{image: "https://images.unsplash.com/photo-1431069767777-c37892aa0a07?dpr=1&auto=format&crop=entropy&fit=crop&w=1920&h=1275&q=80", 
+        events:[{
+            title:"Music / Musicos", description: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee      nulla assumenda shoreditch et."},
+            {title:"Sound Tech", description: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et."}
+        ]},
+        
+        {image: "https://images.unsplash.com/photo-1442115597578-2d0fb2413734?dpr=1&auto=format&crop=entropy&fit=crop&w=1920&h=1280&q=80", 
+        events:[{title:"Youth Ministry", description: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et."},
+        {title:"Kid's Ministry", description: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et."}]},
+        
+        {image:"https://images.unsplash.com/photo-1415226581130-91cb7f52f078?dpr=1&auto=format&crop=entropy&fit=crop&w=1920&h=1440&q=80", 
+        events: [{title:"Men / Caballeros", description: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et."},
+        {title:"Women / Damas", description: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et."}]}];  
 
     $scope.descripEnglish = "Peniel Small Groups. Any day. Any hour. Any place. Sharing Jesus. Building the Church.";
     $scope.descripSpanish = "Peniel Grupos Pequenos. Cualquier dia. Cualquier hora. Cualquier lugar. Compatir a Jesus. Crecer la Iglesia.";  

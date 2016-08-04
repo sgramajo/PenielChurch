@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="website">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
@@ -22,16 +22,16 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
-    <body ng-controller="MainCtrl">
+    <body ng-app="myApp">
         <navbar></navbar>
         <!--SlideShow -->
-        <div class="row">
-          <div class="col-xs-12" ng-if="progress !== 100">
-              <progressbar class="progress-striped" value="progress">{{progress | number:0}}%</progressbar>
-          </div>
-          <img ng-show="loaded" bg-image class="fullBg {{currentAnimation}}" ng-repeat="slide in slides"
-              ng-if="isCurrentSlideIndex($index)"
-              ng-src="{{slide.src}}">
+        <div class="row" ng-controller="showhidecntr">
+            <div id="topPart" ng-style="{height: hgt+ 'px'}">
+                <div class="center-div">
+                    <h1 class="title title_regular ministryTitle" style="font-size: -webkit-xxx-large">Title Title Title Title</h1>
+                    <div style="margin-top: 1em; font-size: x-large">Testing Testign Testeing Testing Testing Testing Testing Testeing </div>
+                </div>
+            </div>
         </div>
     
         <!-- Vision / Mission -->
@@ -143,7 +143,7 @@
         <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
-        <script src="scripts/slideshow.js"></script>
+        <script src="scripts/contact.js"></script>
         <!-- endbuild -->
     </body>
 </html>

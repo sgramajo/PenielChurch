@@ -74,66 +74,64 @@
 
         <!-- Small Groups -->
         <div class="row" id="smallGroups">
-            <div class="container">
-                <div class="col-md-12">
-                    <h4 class="title title_regular responsive_text" style="margin-bottom: 50px;color:grey;text-align:left;">
-                        Small Groups Schedule
-                    </h4>
-                </div>
-                <div class="col-md-12" style="padding-bottom: 30px">
-                    <p class="eng">{{ descripEnglish }}</p>
-                    <p class="esp">{{ descripSpanish }}</p>
-                </div>
-                <div class="col-md-12">
-                    <table class="table table-striped">
-                        <thead>
-                        <tr>
-                            <th>Language</th>
-                            <th>Leader</th>
-                            <th>Focus Group</th>
-                            <th>Meeting Place</th>
-                            <th>Days/Time</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr ng-repeat="group in groups">
-                            <td>{{group.lang}}</td>
-                            <td>{{group.leader}}</td>
-                            <td>{{group.focus}}</td>
-                            <td>{{group.meeting}}</td>
-                            <td>{{group.day}}</td>
-                        </tr>
-                        </tbody>
-                    </table>
+            <div class="whiteOverlay">
+                <div class="container">
+                    <div class="col-md-12">
+                        <h4 class="title title_regular responsive_text" style="margin-bottom: 30px;color:white;text-align:center;">
+                            Small Groups Schedule
+                        </h4>
+                    </div>
+                    <div class="col-md-12" style="padding-bottom: 30px; text-align:center;">
+                        <p class="eng">{{ descripEnglish }}</p>
+                        <p class="esp">{{ descripSpanish }}</p>
+                    </div>
+                    <div class="col-md-12">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Language</th>
+                                <th>Leader</th>
+                                <th>Focus Group</th>
+                                <th>Meeting Place</th>
+                                <th>Days/Time</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="group in groups">
+                                <td>{{group.lang}}</td>
+                                <td>{{group.leader}}</td>
+                                <td>{{group.focus}}</td>
+                                <td>{{group.meeting}}</td>
+                                <td>{{group.day}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Verse -->
+        
+        <!-- Ministries -->
         <div id="freeSection" class="row">
             <div class="container">
-                "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.""
+            <h4 class="title title_regular responsive_text" style="margin-bottom: 40px;color:white;text-align:center;">
+                Ministry
+            </h4>
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
             </div>
         </div>
 
-        <!-- Ministries -->
-        <div class="row" id="ministriesGroups">
-            <div class="container">
-                <div class="col-md-12">
-                    <h4 class="title title_regular responsive_text" style="margin-bottom: 50px;color:grey;text-align:left;">
-                        Ministries
-                    </h4>
-                </div>
-                <div class="col-sm-12" ng-repeat="ministry in ministries" style="margin-bottom: 10px">
-                    <div class="col-sm-4 side">
-                        <p class="typeGroup">{{ministry.title}}</p>
-                    </div>
-                    <div class="col-sm-7 col-xs-offset-1 side">
-                        <p class="explanation">{{ministry.description}}</p>
-                    </div>
+        <div class="col-sm-12" style="padding: 0;" ng-repeat="ministry in ministries">
+            <div class="col-sm-6 ministry_section soundMusic" style="background: url({{ministry.image}}) no-repeat center center;" ng-class-even="'even'"></div>
+            <div class="col-sm-6 ministry_section">
+                <div class="spacingMinistry" ng-repeat="items in ministry.events">
+                    <h4 class="title title_regular ministryTitle">{{items.title}}</h4>
+                    <div>{{items.description}}</div>
                 </div>
             </div>
         </div>
+
         <footer></footer>
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
