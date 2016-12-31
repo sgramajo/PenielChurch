@@ -1,95 +1,39 @@
-<!doctype html>
-<html class="no-js" lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact</title>
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="icon" type="image/ico" href="images/favicon.ico" />
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/about.css">
-    <link rel="stylesheet" href="styles/contact.css">
-    <!-- endbuild -->
-
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="/bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
-  </head>
-    <body ng-app="myApp">
-    <!--[if lt IE 10]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-       <navbar></navbar>
-        <!--Top Part -->
-        <div class="row" ng-controller="showhidecntr">
-            <div id="topPart" ng-style="{height: hgt+ 'px'}">
-                <div class="center-div">
-                    <h1 class="title title_regular ministryTitle" style="font-size: -webkit-xxx-large">Contact Information</h1>
-                    <div style="margin-top: 1em; font-size: x-large">Testing Testign Testeing Testing Testing Testing Testing Testeing </div>
-                </div>
+<!--Top Part -->
+<div class="row">
+    <div id="topPart">
+        <div class="container" >
+            <h1 class="title title_regular" style="font-size: xx-large; text-align: center; margin-top: 4em">Contact Information</h1>
+        </div>
+    </div>
+</div>
+<!--Information about the church -->
+<div id="info" class="row">
+    <div class="container">
+        <div class="col-sm-12 border">
+            <!-- Location -->
+            <div class="col-sm-4">
+                <div class="icons"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></div>
+                <div class="subtitle">Directions</div>
+                <div>5301 Goddard Ave<br />Orlando, Florida 32810</div>
+                <div style="margin-top: 1em"><a href="{{directions}}">Directions to here</a></div>
+            </div>
+            <!-- Phone -->
+            <div class="col-sm-4">
+                <div class="icons"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span></div>
+                <div class="subtitle">Contact Us</div>
+                <div style="color: black; !important">(407) 583-9027</div>
+            </div>
+            <!-- Times -->
+            <div class="col-sm-4">
+                <div class="icons"><span class="glyphicon glyphicon-time" aria-hidden="true"></span></div>
+                <div class="subtitle">Service Times</div>
+                <div ng-repeat="item in times"><b>{{item.day}}:</b> {{item.time}} <b>{{item.type}}</b></div>
             </div>
         </div>
-        
-        <!--Information about the church -->
-        <div id="info" class="row">
-            <div class="container">
-                <div class="col-sm-12 border">
-                    <!-- Location -->
-                    <div class="col-sm-4">
-                        <div class="icons"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></div>
-                        <div>5301 Goddard Ave<br />Orlando, Florida 32810</div>
-                    </div>
-                    <!-- Phone -->
-                    <div class="col-sm-4">
-                        <div class="icons"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span></div>
-                        <div style="color: black; !important">(407) 583-9027</div>
-                    </div>
-                    <!-- Times -->
-                    <div class="col-sm-4">
-                        <div class="icons"><span class="glyphicon glyphicon-time" aria-hidden="true"></span></div>
-                        <div>Tue: 7:00 pm - 8:00 pm<br />Wed: 7:30 pm - 9:30 pm<br />Fri: 7:00 pm - 9:30 pm <br />Sun:11:00 am - 1:30 pm</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Google Maps -->
-        <div ng-controller="MapCtrl">
-            <div id="map"></div>
-        </div>
+    </div>
+</div>
 
-        <footer></footer>
-        <!-- build:js scripts/vendor.js -->
-        <!-- bower:js -->
-        <script src="/bower_components/jquery/dist/jquery.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
-        <script src="/bower_components/angular/angular.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
-
-        <!-- build:js scripts/plugins.js -->
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
-        <!-- endbuild -->
-
-        <script src="scripts/contact.js"></script>
-
-    </body>
-</html>
+<!-- Google Maps -->
+<div class="row">
+    <div id="map"></div>
+</div>

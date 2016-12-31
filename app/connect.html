@@ -1,173 +1,23 @@
-<!doctype html>
-<html ng-app="mwl.calendar.docs">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Connect</title>
-    <meta name="format-detection" content="telephone=no">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="icon" type="image/ico" href="images/favicon.ico" />
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/about.css">
-    <link rel="stylesheet" href="styles/connect.css">
-    <!-- endbuild -->
-
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="/bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
-  </head>
-    <body ng-controller="MainCtrl">
-        <navbar></navbar>
-        <!--SlideShow -->
-        <div class="row">
-          <img ng-show="loaded" bg-image class="fullBg {{currentAnimation}}" ng-repeat="slide in slides"
-              ng-if="isCurrentSlideIndex($index)"
-              ng-src="{{slide.src}}">
+<div class="row" id="topPart" style="margin-bottom: 2em">
+  <div class="container">
+      <h2 class="title title_regular" style="text-align: center; padding-top: 3.5em">
+          Connect Page
+      </h2>
+  </div>
+</div>
+<div class="row" style="margin-bottom: 5em;">
+    <div class="container">
+        <div class="col-sm-8">
+            <!-- ng-include -->
+            <div ng-include="'connect/default.html'" ng-show="getParameterByName('')"></div>
+            <div ng-include="'connect/events.html'" ng-show="getParameterByName('events')"></div>
+            <div ng-include="'connect/smallGroups.html'" ng-show="getParameterByName('smallGroups')"></div>
         </div>
-
-        <!-- Calendar -->
-        <div class="row" id="calendar">
-            <div class="container">
-                <div ng-controller="KitchenSinkCtrl as vm">
-                    <h2 class="text-center">{{ vm.calendarTitle }}</h2>
-                    <div class="row">
-                        <div class="col-md-6 text-center">
-                            <div class="btn-group">
-                                <button class="btn btn-primary" mwl-date-modifier date="vm.viewDate" decrement="vm.calendarView">Previous</button>
-                                <button class="btn btn-default" mwl-date-modifier date="vm.viewDate" set-to-today>Today</button>
-                                <button class="btn btn-primary" mwl-date-modifier date="vm.viewDate" increment="vm.calendarView">Next</button>
-                            </div>
-                        </div>
-
-                        <br class="visible-xs visible-sm">
-                        <div class="col-md-6 text-center">
-                            <div class="btn-group">
-                                <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'year'">Year</label>
-                                <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'month'">Month</label>
-                                <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'week'">Week</label>
-                                <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'day'">Day</label>
-                            </div>
-                        </div>
-
-                    </div>
-                    <br>
-                    <mwl-calendar
-                        events="vm.events"
-                        view="vm.calendarView"
-                        view-title="vm.calendarTitle"
-                        view-date="vm.viewDate"
-                        cell-is-open="vm.isCellOpen"
-                        day-view-start="06:00"
-                        day-view-end="22:00"
-                        day-view-split="30"
-                    </mwl-calendar>
-                </div>
-            </div>
+        <div class="col-sm-4">
+            <h3>Connect Subpages</h3>
+            <ul style="list-style: none; padding-left: 0;">
+                <li ng-repeat="item in navItems[1].subtopics"><a href="{{item.url}}">{{item.title}}</a></li>
+            </ul>
         </div>
-
-        <!-- Small Groups -->
-        <div class="row" id="smallGroups">
-            <div class="whiteOverlay">
-                <div class="container">
-                    <div class="col-md-12">
-                        <h4 class="title title_regular responsive_text" style="margin-bottom: 30px;color:white;text-align:center;">
-                            Small Groups Schedule
-                        </h4>
-                    </div>
-                    <div class="col-md-12" style="padding-bottom: 30px; text-align:center;">
-                        <p class="eng">{{ descripEnglish }}</p>
-                        <p class="esp">{{ descripSpanish }}</p>
-                    </div>
-                    <div class="col-md-12">
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th>Language</th>
-                                <th>Leader</th>
-                                <th>Focus Group</th>
-                                <th>Meeting Place</th>
-                                <th>Days/Time</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr ng-repeat="group in groups">
-                                <td>{{group.lang}}</td>
-                                <td>{{group.leader}}</td>
-                                <td>{{group.focus}}</td>
-                                <td>{{group.meeting}}</td>
-                                <td>{{group.day}}</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        
-        <!-- Ministries -->
-        <div id="freeSection" class="row">
-            <div class="container">
-            <h4 class="title title_regular responsive_text" style="margin-bottom: 40px;color:white;text-align:center;">
-                Ministry
-            </h4>
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-            </div>
-        </div>
-
-        <div class="col-sm-12" style="padding: 0;" ng-repeat="ministry in ministries">
-            <div class="col-sm-6 ministry_section soundMusic" style="background: url({{ministry.image}}) no-repeat center center;" ng-class-even="'even'"></div>
-            <div class="col-sm-6 ministry_section">
-                <div class="spacingMinistry" ng-repeat="items in ministry.events">
-                    <h4 class="title title_regular ministryTitle">{{items.title}}</h4>
-                    <div>{{items.description}}</div>
-                </div>
-            </div>
-        </div>
-
-        <footer></footer>
-        <!-- build:js scripts/vendor.js -->
-        <!-- bower:js -->
-        <script src="/bower_components/jquery/dist/jquery.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.4/interact.min.js"></script>
-        <script src="/bower_components/angular/angular.js"></script>
-        <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-        <script src="/bower_components/angular-animate/angular-animate.js"></script>
-        <script src="/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenMax.min.js"></script>
-        <script src="http://code.createjs.com/preloadjs-0.4.1.min.js"></script>
-        <script src="/bower_components/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.min.js"></script>
-        <link href="//mattlewis92.github.io/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.min.css" rel="stylesheet">
-
-        <!-- endbower -->
-        <!-- endbuild -->
-
-        <!-- build:js scripts/plugins.js -->
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
-        <!-- endbuild -->
-
-        <!-- build:js scripts/main.js -->
-        <script src="scripts/slideshow.js"></script>
-        <script src="scripts/helper.js"></script>
-        <!-- endbuild -->
-    </body>
-</html>
+    </div>
+</div>

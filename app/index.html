@@ -10,118 +10,69 @@
     <link rel="icon" type="image/ico" href="images/favicon.ico" />
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/connect.css">
+    <link rel="stylesheet" href="styles/ministry.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/contact.css">
     <!-- endbuild -->
-
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
-  <body ng-app="myApp">
+  <body ng-app="myApp" ng-controller="NavCtrl">
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <navbar></navbar>
-    <div class="row">
-        <div class="header-container">
-          <div class="video-container">
-            <video muted autoplay class="embed-responsive-item">
-              <source src=video/PenielChurch2.mp4 type=video/mp4></source>
-            </video>
+    <!-- navbar --> 
+    <nav class="navbar navbar-default" >
+      <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="#/">
+          <div class="navbar-brand" style="padding-top: 0">
+            <img style="height: 2.5em; display: inline-block; vertical-align: middle; " src="images/logo.png" /> 
+            <div style="color: black; display: inline-block"> {{churchName}}</div>
           </div>
-        </div>
-    </div>
-    <!-- Summary -->
-    <div class="row">
-      <div class="container">
-        <div class="summary col-sm-12">
-              <h4 class="title title_regular align_left responsive_text" style="margin-top:0px;margin-bottom: 1.5rem;text-align:center;font-size: 2.667rem;">
-                Peniel Christian Church
-              </h4>
-              <div class="col-sm-12">
-              <div class="paragraph" style="margin-bottom:1em">
-                Peniel Christian Church is a united church focused on spreading the Gospel of Jesus Christ to the nations. We are united under one vision-REVIVAL-alongside our senior pastors, Dr.Luis Lopez and Dr. Marta Lopez.
-              </div>
-              <div class="paragraph">
-                La Iglesia Cristiana Peniel es una iglesia unida enfocada en el Evangelio de Jesuscristo. Estamos unidos bajo una visionunica-AVIVAMIENTO-junto a nuestros pastroes principales, Dr.Luis Lopez y Dra.Marta Lopez.
-              </div>
-            </div>
-            <div style="text-align: center;">
-              <a target="_blank" href="about.html"><button type="button" class="btn footer_btn about_btn">More</button></a>
-            </div>
-        </div>
-      </div>
-    </div>
-    <!-- Events -->
-    <div id="events" class="row background_image_row" ng-controller="MainCtrl">
-      <div class="container">
-        <div class="col-sm-12">
- 	        <h4 class="title title_regular align_left responsive_text" style="margin-top:0px;margin-bottom: 1.5rem;color:white;text-align:left;font-size: 2.667rem;">
-                Upcoming Events
-          </h4>
-        </div>
-        <div class="col-sm-12" ng-repeat="x in myData|limitTo:5">
-          <ul class="list list_style_iconed">
-            <li class="list_item event_item">
-              <div class="list_event_date_start">
-                <div class="position_date">
-                  <span class="day">{{x.start.dateTime | date: "d"}}</span>
-                  <span class="month_year">{{x.start.dateTime | date: "MMM"}} '{{x.start.dateTime | date: "yy"}}</span>
-                </div>
-              </div>
-              <div class="border-box">
-                <div class="list_event_details visible-md-block visible-lg-block">
-                  <span class="icon-clock list-icon"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{x.start.dateTime | date: "EEEE @ h a"}}</span>
-                </div>
-                <div class="list_item_content">
-                  <span class="list_title">{{x.summary}}</span>
-                </div>
-              </div>
+        </a>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li ng-if="items.subtopics" class="dropdown" ng-repeat="items in navItems">
+              <a href="{{items.url}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{items.topic}}</a>
+              <ul class="dropdown-menu">
+                <li ng-repeat="subs in items.subtopics"><a href="{{subs.url}}">{{subs.title}}</a></li>
+              </ul>
             </li>
+            <li ng-if="items.subtopics == null" ng-repeat="items in navItems"><a href="{{items.url}}">{{items.topic}}</a></li>
           </ul>
         </div>
       </div>
-    </div> 
+    </nav>
+    
+    <!-- ng-view -->
+    <ng-view></ng-view>
 
-    <!--Giving -->
-    <div id="giving" class="row">
+    <!-- Footer --> 
+    <div class="col-md-12 footer" style="background-color: #484848;">
       <div class="container">
-        <div class="col-sm-12">
-          <h4 class="title title_regular align_left responsive_text" style="margin-bottom: 40px;color:white;text-align:center;">
-                Online Giving
-          </h4>
+        <div class="col-md-6">
+          <p><a href="#/prayerRequest">Prayer Requests</a></p>
         </div>
-        <div class="giving-wording"><i>“Bring the whole tithe into the store house, that there may be food in my house. <br />Test me in this,” says the Lord Almighty…” (Malachi 3: 10)</i></div>
-        <div class="giving-wording">Thank you for your generosity.  Please note that all donations to the Church are voluntary and nonrefundable. <br /> You may contact us for any inquires.</div>
-        <div style="text-align: center; ">
-          <a target="_blank" href="https://pushpay.com/pay/penielchristianchurch/_pwyNHDRmDJVkAk_E_Qjmw"><button type="button" class="btn footer_btn">Give Now</button></a>
+        <div class="col-md-6" style="text-align: right; ">
+          <div>
+            <div style="display: inline; margin-right: 7px">Connect With Us Socially</div>
+            <a href="https://www.facebook.com/PenielOrlando/?fref=ts"><img  class="footer-img" alt="facebook" src="/images/facebook-3-32.png" /></a>
+          </div>
+          <p style="margin-top:5px; ">{{churchName}}	&#169; 2016</p>
         </div>
       </div>
     </div>
-   
-    <!-- Joing Group -->
-    <div class="new_group row">
-      <div class="container">
-        <div class="col-md-8">
-          <div style="display: inline-block; ">
-            <img alt="plus_icon" src="http://gracechurch.ancorathemes.com/wp-content/uploads/2015/08/Call-to-action-icon.png" />
-          </div>
-          <div style="display:inline-table; margin-left: 20px; ">
-            <h4 class="footer_h4">New Here?</h4>
-            <div class="footer_new_desc">Find out how, where and when we worship. We hope to see you soon!</div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <button type="button" class="btn footer_btn">Join a Group</button>
-        </div>
-      </div>
-    </div>
-
-    <footer></footer>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -136,6 +87,9 @@
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/angular/angular.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenMax.min.js"></script>
+    <script src="http://code.createjs.com/preloadjs-0.4.1.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -152,10 +106,20 @@
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="/bower_components/angular-filter/dist/angular-filter.min.js"></script>
+    <script src="/bower_components/angular-route/angular-route.min.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
+    <script src="scripts/IndexCtrl.js"></script>
+    <script src="scripts/routeProvider.js"></script>
+    <script src="scripts/homeCtrl.js"></script>
+    <script src="scripts/aboutCtrl.js"></script> 
+    <script src="scripts/contactCtrl.js"></script>
+    <script src="scripts/connectCtrl.js"></script>
+    <script src="scripts/ministryCtrl.js"></script>
     <!-- endbuild -->
   </body>
 </html>

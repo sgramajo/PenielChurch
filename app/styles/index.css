@@ -1,88 +1,26 @@
-.list_event_details{
-  left: 30rem;
-  margin: 2rem 0;
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
-  padding-left: 1.5rem ;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  color: white;
-  font-size: 18px;
-}
-.list_event_location{
-  right: 1rem;
-  width: 15rem;
-  margin: 1.7rem 0;
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
-  padding-left: 1.5rem;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-}
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
-  color: white;
   text-decoration: underline;
 }
-.list_event_location_content{
-  margin-left: 2rem;
-  font-size: 0.8667rem;
-  line-height: 1.6;
-}
-.list_item_content{
-  font-size: 1.667rem;
-  display: table-cell;
-  vertical-align: middle;
-  height: 4rem;
-  padding: 1rem 0;
-}
-.list_title{
-  line-height: 1.1;
-  white-space: initial;
-  padding-left: 12px;
-  height: 4rem;
-  display: table-cell;
-  vertical-align: middle;
-}
-@media (min-width: 768px){
-  .navbar-right{
-    margin-left: 43%;
-  }
-}
-.footer_new_desc{
-  margin-right: 0.5em;
-  display: inline-block;
-  color: white;
-  text-align: left;
-  line-height: 1.3em;
-  text-transform: none;
-  font-size: 1em;
-  font-style: normal;
-  font-weight: 400;
-}
 .footer_btn{
-  text-transform: uppercase;
   background-color: transparent;
   border: 3px solid rgba(255, 255, 255, 0.4);
-  padding: 18.662px 39px;
+  padding: 9px 12px;
   color: white;
-  font-weight: bold;
-  font-size: 18px;
-}
-@media (min-width: 768px)
-{
-  .navbar-right {
-      float: left !important; 
-      margin-right: 0;
-  }
+  display: block; 
+  width: 13em; 
+  font-size: 15px;
+  margin: 1em auto; 
 }
 .about_btn{
   color: indianred;
   border-color: indianred;
   margin-top: 3em; 
+  text-decoration: none !important; 
 }
 .about_btn:hover{
   color:white !important;
   background-color: indianred !important;
+  text-decoration: none !important; 
 }
 .new_group{
   padding-top: 37.8px;
@@ -90,18 +28,7 @@
   background-color: indianred;
 }
 .col-md-4 > .footer_btn:hover{
-  color: #ff6a48;
   background-color: white;
-}
-.footer_btn:hover{
-  color: gray;
-  background-color: white;
-}
-.footer_h4{
-  color: white;
-  font-size: 1.7857em;
-  font-weight: 400;
-  line-height: 20px;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus
 {
@@ -265,54 +192,6 @@ a {
 ul{
   margin-bottom: 1.5em;
 }
-.border-box{
-  border-color: rgba(244, 244, 244, 0.3) !important;
-  border: 3px solid;
-  min-height: 6rem;
-  margin-bottom: 2rem;
-  padding-right: 35rem !important;
-  margin-left: 7rem;
-  position: relative;
-}
-div.list_event_date_start{
-  position: absolute;
-  margin: auto;
-  border-color: indianred;
-  background-color: indianred;
-}
-.position_date{
-  height: 3rem;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  position: absolute;
-}
-div.list_event_date_start{
-  width: 6.1rem;
-  text-align: center;
-  top: -3px;
-  bottom: -3px;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
-.position_date .day, .position_date .month_year{
-  color: white;
-}
-.month_year{
-  font-size: 0.6667rem;
-}
-div.list_event_date_start .position_date .day{
-  font-size: 2.667rem;
-  display: block;
-}
-.list_style_iconed li{
-  list-style: none;
-  position: relative;
-  line-height: 1.8em;
-}
 body{
   font-family: "Montserrat", sans-serif;
   line-height: 1.8em;
@@ -347,49 +226,31 @@ div.pics > div{
   display: table-row; 
 }
 .navbar-default{
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: white;
   border-color: transparent;
   padding-top: 12px;
-  padding-bottom: 12px;  
+}
+.navbar-default .navbar-nav > li > a{
+  color: black; 
+}
+#events{
+  padding: 55px 0; 
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.25), 
+      rgba(0, 0, 0, 0.25)
+    ), url("/images/gathering.jpg");
+        background-size: cover;
+    background-repeat: no-repeat; 
 }
 #giving
 {
-  padding: 60px 0; 
-  background-image: url("/images/oceanPhoto.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; 
-}
-.navbar-brand, .navbar-default, .navbar-default .navbar-nav > li > a{
-  font-size: 23px;
-  color:white; 
-}
-.giving-wording{
-  color: white;
-  text-align: center;
-  font-size: 20px;
-  text-shadow: 1px 1px gray;
-  margin-bottom: 60px;  
-}
-@media (max-width: 681px) {
-  .header-container{
-    height: 400px; 
-  }
-}
-@media (min-width: 991px) {
-  .header-container{
-    height: 590px; 
-  }
-}
-
-@media (min-width: 992px) {
-  .header-container{
-    height: 800px; 
-  }
-}
-@media (min-width: 1499px) {
-  .header-container{
-    height: 950px; 
-  }
+  padding: 55px 0; 
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.25), 
+      rgba(0, 0, 0, 0.25)
+    ), url("/images/oceanPhoto.jpg"); 
+    background-size: cover;
+    background-repeat: no-repeat; 
 }
 
 @media (max-width: 768px) {
@@ -397,20 +258,52 @@ div.pics > div{
     margin-bottom: 0;
   }
 }
-#image_two{
-  background-image: url("../images/pastorDanny.jpg");
-}
-#image_three{
-  background-image: url("../images/pink.jpg");
-}
-#image_four{
-  background-image: url("../images/bible.jpg");
-}
-#image_five{
-  background-image: url("../images/red.jpg");
+.dropdown-menu .sub-menu {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    margin-top: -1px;
 }
 
-#events{
-  background-image: url(https://images.unsplash.com/photo-1466059163810-56070e5d9e8a?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1920&h=1280&q=80) !important;
-  transition: opacity 0.5s ease;
+.dropdown-menu li:hover .sub-menu {
+    visibility: visible;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-tabs .dropdown-menu, .nav-pills .dropdown-menu, .navbar .dropdown-menu {
+    margin-top: 0;
+}
+
+.navbar .sub-menu:before {
+    border-bottom: 7px solid transparent;
+    border-left: none;
+    border-right: 7px solid rgba(0, 0, 0, 0.2);
+    border-top: 7px solid transparent;
+    left: -7px;
+    top: 10px;
+}
+.navbar .sub-menu:after {
+    border-top: 6px solid transparent;
+    border-left: none;
+    border-right: 6px solid #fff;
+    border-bottom: 6px solid transparent;
+    left: 10px;
+    top: 11px;
+    left: -6px;
+}
+.shortSec{
+  display: inline-block;
+  height: 12.5em; 
+  text-align: center; 
+  color: white;
+  font-weight: bold; 
+}
+#summary{
+  background-color: #e6e6e6; 
+  margin-top: 3em;
+  padding-bottom: 3em; 
 }

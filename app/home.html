@@ -1,0 +1,29 @@
+<div class="header-container">
+    <!--SlideShow-->
+    <div class="row" style="margin-bottom: 1em">
+        <img ng-show="loaded" bg-image class="fullBg {{currentAnimation}}" ng-repeat="slide in slides"
+            ng-if="isCurrentSlideIndex($index)"
+            ng-src="{{slide.src}}">
+    </div>
+</div>
+<!-- Give, Events, and Small Groups-->
+<div class="row">
+    <div class="container">
+        <div id="smallGroups" class="shortSec col-md-4">Small Groups<button type="button" class="btn footer_btn">Join a Small Groups</button></div>
+        <div id="giving" class="shortSec col-md-4">Give Online<button type="button" class="btn footer_btn">Give Now</button></div>
+        <div id="events" class="shortSec col-md-4">Events<button class="btn footer_btn">View Upcoming Events</button></div>
+    </div>
+</div>
+<!-- Summary -->
+<div class="row" id="summary">
+    <div class="container">
+        <div class="summary col-sm-12">
+            <h4 class="title title_regular align_left responsive_text" style="margin-top:0px;margin-bottom: 1.5rem;text-align:center;font-size: 2.667rem;">
+            Peniel Christian Church
+            </h4>
+            <div class="col-sm-12">
+                <div class="paragraph" style="margin-bottom:1em">{{summary}}</div>
+            </div>
+        </div>
+    </div>
+</div>
