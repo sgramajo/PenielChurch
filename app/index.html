@@ -38,18 +38,18 @@
         <a href="#/">
           <div class="navbar-brand" style="padding-top: 0">
             <img style="height: 2.5em; display: inline-block; vertical-align: middle; " src="images/logo.png" /> 
-            <div style="color: black; display: inline-block"> {{churchName}}</div>
+            <div style="color: black; display: inline-block" ng-cloak> {{churchName}}</div>
           </div>
         </a>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li ng-if="items.subtopics" class="dropdown" ng-repeat="items in navItems">
-              <a href="{{items.url}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{items.topic}}</a>
+              <a href="{{items.url}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" ng-cloak>{{items.topic}}</a>
               <ul class="dropdown-menu">
-                <li ng-repeat="subs in items.subtopics"><a href="{{subs.url}}">{{subs.title}}</a></li>
+                <li ng-repeat="subs in items.subtopics" ng-cloak><a href="{{subs.url}}" ng-cloak>{{subs.title}}</a></li>
               </ul>
             </li>
-            <li ng-if="items.subtopics == null" ng-repeat="items in navItems"><a href="{{items.url}}">{{items.topic}}</a></li>
+            <li ng-if="items.subtopics == null" ng-repeat="items in navItems" ng-cloak><a href="{{items.url}}" ng-cloak>{{items.topic}}</a></li>
           </ul>
         </div>
       </div>
@@ -66,7 +66,7 @@
             <div style="display: inline; margin-right: 7px">Connect With Us Socially</div>
             <a href="https://www.facebook.com/PenielOrlando/?fref=ts"><img  class="footer-img" alt="facebook" src="/images/facebook-3-32.png" /></a>
           </div>
-          <p style="margin-top:5px; ">{{churchName}}	&#169; 2016</p>
+          <p style="margin-top:5px; " ng-cloak>{{churchName}}	&#169; 2016</p>
         </div>
       </div>
     </div>

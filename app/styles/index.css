@@ -1,6 +1,3 @@
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
-  text-decoration: underline;
-}
 .footer_btn{
   background-color: transparent;
   border: 3px solid rgba(255, 255, 255, 0.4);
@@ -22,6 +19,11 @@
   background-color: indianred !important;
   text-decoration: none !important; 
 }
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+.ng-cloak { display:none; }
+
 .new_group{
   padding-top: 37.8px;
   padding-bottom: 37.8px;

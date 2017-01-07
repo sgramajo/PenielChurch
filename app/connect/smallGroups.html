@@ -2,7 +2,7 @@
 <div style="margin-top: 2em">
     <div style="display: table;">
         <div class="col-xs-3 display-div-center"><img src="images/smallGroups.png" /></div>   
-        <div class="col-xs-9 display-div-center">{{smallGroupsDesp}} <a href="https://www.facebook.com/penielsmallgroups/">Facebook Link</a></div>
+        <div class="col-xs-9 display-div-center" ng-cloak>{{smallGroupsDesp}} <a href="https://www.facebook.com/penielsmallgroups/">Facebook Link</a></div>
     </div>
     <!-- Language --> 
     <div class="for-group" style="margin-top: 1em; ">
@@ -16,7 +16,7 @@
     <div class="for-group" ng-show='langDropDown != null' style="margin-top: 1em; ">
         <select class="form-control" id="sel1" ng-model="focusDropDown">
             <option disabled selected value>Focus Group</option>
-            <option value="{{item.focus}}" ng-repeat="item in smallGroups | unique: 'focus'">{{item.focus}}</option>
+            <option value="{{item.focus}}" ng-repeat="item in smallGroups | unique: 'focus'" ng-cloak>{{item.focus}}</option>
         </select>
     </div>
 </div>
@@ -24,7 +24,7 @@
     <thead>
         <th ng-if="seeAll">Language</th>
         <th ng-if="seeAll">Focus</th>
-        <th ng-repeat="item in columns">{{item}}</th>
+        <th ng-repeat="item in columns" ng-cloak>{{item}}</th>
     </thead>
     <tbody>
         <tr ng-repeat="item in smallGroups  | filter: {lang: langDropDown} | filter : {focus: focusDropDown} : true">
