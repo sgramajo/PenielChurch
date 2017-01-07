@@ -5,17 +5,18 @@ app.controller('NavCtrl', function($scope, $timeout, QueueService) {
         {"topic": "About", "url":"#/about", "subtopics":
             [{"title": "Vision", "url": "#/about?topic=vision"}, {"title": "Meet the Pastors", "url": "#/about?topic=pastors"}, {"title": "Church Info", "url": "#/about?topic=info"}]}, 
         {"topic": "Connect", "url":"#/connect", "subtopics": 
-            [{"title": "Events", "url": "#/connect?topic=events"}, {"title": "Small Groups", "url": "#/connect?topic=smallGroups"}, {"title": "Kids", "url": "#/ministry?title=sparks"}, {"title": "Youth", "url": "#/ministry?title=youth"}]},
+            [{"title": "Events", "url": "#/connect?topic=events"}, {"title": "Small Groups", "url": "#/connect?topic=smallGroups"}]},
         {"topic": "Grow", "url":"#/grow", "subtopics": 
-            [{"title": "Women", "url": "#/ministry?title=women"}, {"title": "Men", "url": "#/ministry?title=men"}, {"title": "Worship", "url": "#/ministry?title=worship"}]},
+            [ {"title": "Kids", "url": "#/ministry?topic=sparks"}, {"title": "Youth", "url": "#/ministry?topic=youth"}, {"title": "Women", "url": "#/ministry?topic=women"}, {"title": "Men", "url": "#/ministry?topic=men"}]},
         {"topic": "Giving", "url":"https://pushpay.com/pay/penielchristianchurch/_pwyNHDRmDJVkAk_E_Qjmw"}, 
         {"topic": "Contact", "url":"#/contact"}]; 
     $scope.times = [{"day": "Tuesday", "time": "7:00pm - 8:00pm", "type": "Prayer Service"}, {"day": "Wednesday", "time": "7:30pm - 9:30pm", "type": "Bible Service"}, 
                     {"day": "Friday", "time": "7:00pm - 9:30pm", "type": "Youth Service"}, {"day": "Sunday", "time": "11:00am - 1:30pm", "type": "Sunday Service"}]; 
-    $scope.churchName = "Peniel Christian Church"; 
+    $scope.churchName = "Peniel Christian Church";
+    $scope.giving = "https://pushpay.com/pay/penielchristianchurch/bohOQ6p1wcEC0X_Bgk2Yag";  
       //slideshow
         var INTERVAL = 3000,
-        slides = [{id:"image00", src:"./images/newYear.jpg"}];//, {id:"image01", src:"../images/vbs.jpg"}]; 
+        slides = [{id:"image00", src:"./images/peniel.jpg"}];//, {id:"image01", src:"../images/vbs.jpg"}]; 
         
         function setCurrentSlideIndex(index) {
                 $scope.currentIndex = index;

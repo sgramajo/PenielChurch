@@ -22,8 +22,5 @@ app.config(function($routeProvider){
     .when('/ministry',{
         templateUrl: 'ministry.html', 
         controller: 'ministryCtrl'
-    })
-    .when('/prayerRequest',{
-        templateUrl: 'prayerRequest.html'
     });
 });

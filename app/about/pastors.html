@@ -1,6 +1,6 @@
 <!-- pictures of the pastors--> 
 <h2 class="title title_regular" style="margin-bottom: 1em">Meet the Pastors</h2>
-<figure class="figure col-sm-4" ng-repeat="item in pastors">
+<figure ng-style="$first && {'margin-bottom':'0'}" class="figure col-sm-4" ng-repeat="item in pastors">
     <img ng-style="item.stmt && {'cursor':'pointer'}" src="{{item.img}}" ng-click="changeStmts($index)" class="figure-img img-fluid img-rounded" alt="A placeholder image">
     <figcaption class="figure-caption">{{item.name}}</figcaption>
 </figure><br>

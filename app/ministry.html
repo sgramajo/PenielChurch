@@ -1,12 +1,19 @@
-<!--SlideShow -->
-<div class="row" id="topSection"></div>
-<div class="row" style="margin: 5em auto; ">
-  <div class="container">
-      Outline about the ministry
-  </div>
-</div>
-<div class="row" style="margin: 5em auto; ">
-  <div class="container">
-      Section about the leader of the ministry
+<div>
+  <div class="row" id="topSection" style="background: {{ministryImage}}"></div>
+  <div class="container" style="margin: 1.5em auto;">
+    <div class="col-sm-8">
+      <div class="row">
+            {{ministryOutline}}
+      </div>
+      <div class="row" style="margin-top: 5em">
+            {{ministrySummary}} 
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <h3>About Subpages</h3>
+      <ul style="list-style: none; padding-left: 0;">
+          <li ng-repeat="item in navItems[2].subtopics"><a href="{{item.url}}">{{item.title}}</a></li>
+      </ul>
+    </div>
   </div>
 </div>

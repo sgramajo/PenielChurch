@@ -225,10 +225,15 @@ div.pics > div{
 .container:before, .container:after{
   display: table-row; 
 }
+body
+{
+  background-image: url(../images/wavegrid.png); 
+}
 .navbar-default{
   background-color: white;
   border-color: transparent;
   padding-top: 12px;
+  background-image: url(../images/wavegrid.png); 
 }
 .navbar-default .navbar-nav > li > a{
   color: black; 
