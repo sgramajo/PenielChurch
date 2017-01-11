@@ -4,6 +4,10 @@ $icon-font-path: '../fonts/';
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+.title{
+  color: #1b81e5 !important;
+
+}
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;

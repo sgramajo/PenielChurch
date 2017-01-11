@@ -43,7 +43,7 @@ div figure:first-child {
 }
 .fullBg {
     top: 0;
-    width: 90em;
+    width: 90%;
     display:block;
     margin: auto;  
 }

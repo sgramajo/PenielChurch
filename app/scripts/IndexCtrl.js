@@ -11,7 +11,7 @@ app.controller('NavCtrl', function($scope, $timeout, QueueService) {
         {"topic": "Giving", "url":"https://pushpay.com/pay/penielchristianchurch/_pwyNHDRmDJVkAk_E_Qjmw"}, 
         {"topic": "Contact", "url":"#/contact"}]; 
     $scope.times = [{"day": "Tuesday", "time": "7:00pm - 8:00pm", "type": "Prayer Service"}, {"day": "Wednesday", "time": "7:30pm - 9:30pm", "type": "Bible Service"}, 
-                    {"day": "Friday", "time": "7:00pm - 9:30pm", "type": "Youth Service"}, {"day": "Sunday", "time": "11:00am - 1:30pm", "type": "Sunday Service"}]; 
+                    {"day": "Friday", "time": "7:00pm - 9:30pm", "type": "Youth Service"}, {"day": "Sunday", "time": "11:00am - 1:30pm", "type": "Worship Service"}]; 
     $scope.churchName = "Peniel Christian Church";
     $scope.giving = "https://pushpay.com/pay/penielchristianchurch/bohOQ6p1wcEC0X_Bgk2Yag";  
       //slideshow

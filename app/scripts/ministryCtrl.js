@@ -7,7 +7,7 @@ app.controller('ministryCtrl', function($scope, $location) {
         {"group": "women", "image":"../images/Womens.gif", "outline": "Welcome to the Women's Ministry!! We look forward to having you join us and through this ministry see Gods great love be spread. We need and welcome you to be a part of Gods GREAT revival in Peniel through this ministry. Help be an activist of Gods work and not a spectator. The difference is made by YOU!", "other": ""}];
      
     $scope.ministryOutline = ""; 
-    $scope.ministrySummary = ""; 
+    $scope.ministrySummary = "Our desire is that you get involved and grow here at Peniel Christian Church. Here are some great ministries that will help you get on track to a developed and blessed life. We desire and want to help you grow in your relationship with Jesus Christ. Even if you just accepted the Lord into your life or you have been saved for any amount of time, this is for YOU! From a young child in our SPARKS ministry, or a growing young man or women involved in our LIFE UTH ministry to even getting involved with our Men's and Women's Ministries we offer a variety of great opportunities to develop in this blessed life. Visit our Calendar to find out what's coming up.";  
     $scope.ministryImage = ""; 
     $scope.$on("$routeChangeSuccess", function() {
         $scope.testing(); 
@@ -28,7 +28,6 @@ app.controller('ministryCtrl', function($scope, $location) {
             $scope.ministryOutline = result[0].outline;  
             $scope.ministrySummary = result[0].other; 
             $scope.ministryImage = 'url(' + result[0].image + ') no-repeat center center';  
-            //angular.element('#topSection').css('background', 'url(' + result[0].image + ') no-repeat center center');
         }
         return true;  
     }; 
