@@ -1,9 +1,10 @@
 <!-- pictures of the pastors--> 
-<h2 class="title title_regular" style="margin-bottom: 1em">Meet the Pastors</h2>
+<h2 class="title title_regular" style="margin-bottom: 1em" translate="PASTORS"></h2>
 <figure ng-style="$first && {'margin-bottom':'0'}" class="figure col-sm-4" ng-repeat="item in pastors">
-    <img ng-style="item.stmt && {'cursor':'pointer'}" src="{{item.img}}" ng-click="changeStmts($index)" class="figure-img img-fluid img-rounded" alt="A placeholder image">
-    <figcaption class="figure-caption" ng-cloak>{{item.name}}</figcaption>
-</figure><br>
-<div>
-    <p class="col-sm-12 text-justify" ng-cloak>{{stmts}}</p>
-</div>
+    <div popover="item" tabindex="0" style="cursor: pointer" data-toggle="popover" data-trigger="focus" data-content="{{item.stmt}}" ng-if="item.stmt">
+        <img src="{{item.img}}" class="figure-img img-fluid img-rounded" alt="A placeholder image">
+        <figcaption class="figure-caption" ng-cloak>{{item.name}}</figcaption>
+    </div>
+    <img ng-if="!item.stmt" src="{{item.img}}" class="figure-img img-fluid img-rounded" alt="A placeholder image">
+    <figcaption ng-if="!item.stmt" class="figure-caption" ng-cloak>{{item.name}}</figcaption>
+</figure>

@@ -1,6 +1,6 @@
 <div class="row" id="topPart">
   <div class="container">
-      <h2 class="title title_regular" style="text-align: center; padding-top: 3.5em">Welcome to Peniel Christian Church</h2>
+      <h2 class="title title_regular" style="text-align: center; padding-top: 3.5em" translate="WELCOME"></h2>
   </div>
 </div>
 <div class="row" style="margin-top: 1.5em; margin-bottom: 5em;">
@@ -8,11 +8,10 @@
     <div class="col-sm-8">
       <div ng-include="'about/default.html'" ng-show="getParameterByName('')"></div>
       <div ng-include="'about/vision.html'" ng-show="getParameterByName('vision')"></div>
-      <div ng-include="'about/info.html'" ng-show="getParameterByName('info')"></div>
       <div ng-include="'about/pastors.html'" ng-show="getParameterByName('pastors')"></div>
     </div>
     <div class="col-sm-4">
-      <h3>About Subpages</h3>
+      <h3 translate="ABOUTSUBPAGES"></h3>
       <ul style="list-style: none; padding-left: 0;">
           <li ng-repeat="item in navItems[0].subtopics" ng-cloak><a href="{{item.url}}">{{item.title}}</a></li>
       </ul>

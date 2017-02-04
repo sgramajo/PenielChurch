@@ -1,7 +1,6 @@
 app.controller('connectCtrl', function($scope, $location, $http) {
      $scope.seeAll = false; 
      $scope.columns = ["Leader","Meeting Place", "Days/Times"];
-     $scope.smallGroupsDesp = "Peniel Small Groups. Any day. Any hour. Any place. Sharing Jesus. Building the Church."; 
      $scope.smallGroups = [{lang: "Spanish", leader: "Jackeline Matias", focus: "Women", day: "Monday @ 7pm", meeting:"Panera Bread: 200 S State Rd 434, Altamonte Springs, FL 32714"},
         {lang: "English", leader: "Willy Figueroa", focus: "Young Adult Men", day: "Monday @ 7pm", meeting:"Altamonte Mall Food Court: 451 E Altamonte Dr, Altamonte Springs, FL 32701"}, 
         {lang: "Spanish/English", leader: "Hector Ortiz", focus: "Men", day: "Thursday @ 7pm", meeting:"Panera Bread: 200 S State Rd 434, Altamonte Springs, FL 32714"}, 

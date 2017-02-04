@@ -7,23 +7,41 @@
     </div>
 </div>
 <!-- Give, Events, and Small Groups-->
-<div class="row" style="margin-left:0; margin-right:0px;">
+<div class="row">
     <div class="container">
-        <div id="smallGroups" class="shortSec col-md-4 col-sm-12 col-xs-12">Small Groups<button type="button" onclick="window.location.href='/#/connect?topic=smallGroups'" class="btn footer_btn">Join a Small Groups</button></div>
-        <div id="giving" class="shortSec col-md-4 col-sm-12 col-xs-12">Give Online<button type="button" onclick="window.location.href='https://pushpay.com/pay/penielchristianchurch/fgbclpLaSTbKAWeQ-q6HBQ'" class="btn footer_btn">Give Now</button></div>
-        <div id="events" class="shortSec col-md-4 col-sm-12 col-xs-12">Events<button class="btn footer_btn" onclick="window.location.href='https://calendar.google.com/calendar/embed?src=potsh8cvmjmjl0tcbqcahpuorc%40group.calendar.google.com&ctz=America/New_York'">View Upcoming Events</button></div>
+        <div id="smallGroups" class="shortSec col-md-4 col-sm-12 col-xs-12">{{ 'SMALLGROUPS' | translate }}<button type="button" onclick="window.location.href='/#/connect?topic=smallGroups'" class="btn footer_btn" translate="JOINSMALL"></button></div>
+        <div id="giving" class="shortSec col-md-4 col-sm-12 col-xs-12">{{ 'GIVE' | translate }}<button type="button" onclick="window.location.href='https://pushpay.com/pay/penielchristianchurch/fgbclpLaSTbKAWeQ-q6HBQ'" class="btn footer_btn"  translate="GIVENOW"></button></div>
+        <div id="events" class="shortSec col-md-4 col-sm-12 col-xs-12">{{ 'EVENTS' | translate }}<button class="btn footer_btn" onclick="window.location.href='https://calendar.google.com/calendar/embed?src=potsh8cvmjmjl0tcbqcahpuorc%40group.calendar.google.com&ctz=America/New_York'" translate="VIEWEVENTS"></button></div>
+    </div>
+</div>
+<!-- Worship Times and Location  ----->
+<div class="row" style="margin: 3em 0; color: gray;">
+    <div class="container">
+        <div class="col-md-6">
+            <div style="padding: 10px; background: white; text-align: center;">
+                <div class="subtitle" translate="CONTACT"></div>
+                <div>5301 Goddard Ave<br />Orlando, Florida 32810</div>
+                <div style="color: white; !important">(407) 583-9027</div>
+                <div><a href="{{directions}}" target="_blank" style="color: #23527c" translate="DIRECTIONS"></a></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div style="padding:10px; background: white; text-align: center;">
+                <div class="subtitle" translate="SERVICE"></div>
+                <div><b>{{'TUESDAY' | translate }}:</b> 7:00pm - 8:00pm <b translate="BILINGUALPRAYER"></b></div>
+                <div><b>{{'WEDNESDAY' | translate }}:</b> 7:30pm - 9:00pm <b translate="BILINGUALBIBLE"></b></div>
+                <div><b>{{'FRIDAY' | translate }}:</b> 7:30pm - 9:30pm <b translate="BILINGUALYOUTH"></b></div>
+                <div><b>{{'SUNDAY' | translate }}:</b> 11:00am - 1:00pm <b translate="BILINGUALWORSHIP"></b></div>
+            </div>
+        </div>
     </div>
 </div>
 <!-- Summary -->
-<div class="row" id="summary" style="margin-left: 0; margin-right: 0px;">
+<div style="margin-top: 3em; background: rgba(11, 60, 93, 1);">
     <div class="container">
-        <div class="summary col-sm-12">
-            <h4 class="title title_regular align_left responsive_text" style="margin-top:0px;margin-bottom: 1.5rem;text-align:center;font-size: 2.667rem;">
-            Peniel Christian Church
-            </h4>
-            <div class="col-sm-12">
-                <div class="paragraph" style="margin-bottom:1em" ng-cloak>{{summary}}</div>
-            </div>
+        <div>
+            <h4 class="title responsive_text" style="padding: 2rem 0; color: white; text-align:center;font-size: 2.667rem;" translate="CHURCHNAME"></h4>
+            <p class="paragraph" style="padding: 0 1rem 2.5rem 1rem; color: white" translate="SUMMARY" ng-cloak></p>
         </div>
     </div>
 </div>

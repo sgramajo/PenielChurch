@@ -1,12 +1,7 @@
 app.config(function($routeProvider){
   $routeProvider
     .when("/", {
-      templateUrl: "home.html",
-      controller: "MainCtrl"
-    })
-    .when('/contact', {
-        templateUrl: 'contact.html',
-        controller: 'MapCtrl'
+      templateUrl: "home.html"
     })
     .when('/connect', {
         templateUrl: 'connect.html',

@@ -1,11 +1,9 @@
-<div class="row" id="topPart" style="margin-bottom: 2em">
+<div class="row" id="topPart" style="margin-bottom: 2em; margin-right: 0px; margin-left: 0; ">
   <div class="container">
-      <h2 class="title title_regular" style="text-align: center; padding-top: 3.5em">
-          Connect with Peniel Christian Church
-      </h2>
+      <h2 class="title title_regular" style="text-align: center; padding-top: 3.5em" translate="CONNECTTITLE"></h2>
   </div>
 </div>
-<div class="row" style="margin-bottom: 5em;">
+<div class="row" style="margin-bottom: 5em; margin-right: 0px; margin-left: 0; ">
     <div class="container">
         <div class="col-sm-8">
             <!-- ng-include -->
@@ -14,7 +12,7 @@
             <div ng-include="'connect/smallGroups.html'" ng-show="getParameterByName('smallGroups')"></div>
         </div>
         <div class="col-sm-4">
-            <h3>Connect Subpages</h3>
+            <h3 translate="CONNECTSUBPAGES"></h3>
             <ul style="list-style: none; padding-left: 0;">
                 <li ng-repeat="item in navItems[1].subtopics" ng-cloak><a href="{{item.url}}">{{item.title}}</a></li>
             </ul>

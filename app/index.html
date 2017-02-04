@@ -5,20 +5,13 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PenielChurch</title>
-
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" type="image/ico" href="images/favicon.ico" />
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/connect.css">
     <link rel="stylesheet" href="styles/ministry.css">
     <link rel="stylesheet" href="styles/about.css">
-    <link rel="stylesheet" href="styles/contact.css">
-    <!-- endbuild -->
-    <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
@@ -38,10 +31,10 @@
         <a href="#/">
           <div class="navbar-brand" style="padding-top: 0">
             <img style="height: 2.5em; display: inline-block; vertical-align: middle; " src="images/logo.png" /> 
-            <div style="color: black; display: inline-block" ng-cloak> {{churchName}}</div>
+            <div style="color: black; display: inline-block" ng-cloak> {{'CHURCHNAME' | translate }}</div>
           </div>
         </a>
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse" style="width: 100%">
           <ul class="nav navbar-nav navbar-right">
             <li ng-if="items.subtopics" class="dropdown" ng-repeat="items in navItems">
               <a href="{{items.url}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" ng-cloak>{{items.topic}}</a>
@@ -59,14 +52,16 @@
     <ng-view></ng-view>
 
     <!-- Footer --> 
-    <div class="col-md-12 footer" style="background-color: #484848;">
+    <div class="row footer" style="background-color: rgba(30, 38, 49, 1);">
       <div class="container">
-        <div class="col-md-12" style="text-align: right; ">
-          <div>
-            <div style="display: inline; margin-right: 7px">Connect With Us Socially</div>
-            <a href="https://www.facebook.com/PenielOrlando/?fref=ts"><img  class="footer-img" alt="facebook" src="/images/facebook-3-32.png" /></a>
-          </div>
-          <p style="margin-top:5px; " ng-cloak>{{churchName}}	&#169; 2017</p>
+        <div class="col-xs-2" >
+          <button ng-click="changeLanguage('en')" translate="BUTTON_TEXT_EN" style="background: none; border: none"></button><br /> 
+          <button ng-click="changeLanguage('esp')" translate="BUTTON_TEXT_ESP" style="background: none; border: none"></button>
+        </div>
+        <div class="col-xs-10" style="text-align: right; ">
+          <div style="display: inline; margin-right: 7px" ng-cloak>{{'CONNECT' | translate }}</div>
+          <a href="https://www.facebook.com/PenielOrlando/?fref=ts"><img  class="footer-img" alt="facebook" src="/images/facebook-3-32.png" /></a>
+          <p style="margin-top:5px; " ng-cloak>{{'CHURCHNAME' | translate }} &#169; 2017</p>
         </div>
       </div>
     </div>
@@ -87,13 +82,10 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenMax.min.js"></script>
     <script src="http://code.createjs.com/preloadjs-0.4.1.min.js"></script>
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjYprOM5KCqRVFjKH8_ZRKICcb9OleWAM" type="text/javascript"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-
     <!-- build:js scripts/plugins.js -->
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="/bower_components/angular-translate/angular-translate.min.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
@@ -113,9 +105,7 @@
     <!-- build:js scripts/main.js -->
     <script src="scripts/IndexCtrl.js"></script>
     <script src="scripts/routeProvider.js"></script>
-    <script src="scripts/homeCtrl.js"></script>
     <script src="scripts/aboutCtrl.js"></script> 
-    <script src="scripts/contactCtrl.js"></script>
     <script src="scripts/connectCtrl.js"></script>
     <script src="scripts/ministryCtrl.js"></script>
     <!-- endbuild -->

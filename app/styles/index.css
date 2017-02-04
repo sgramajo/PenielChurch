@@ -8,6 +8,13 @@
   font-size: 15px;
   margin: 1em auto; 
 }
+button:focus{
+    outline: transparent auto 5px !important;
+}
+.row{
+  margin-left: 0px;
+  margin-right: 0px; 
+}
 .about_btn{
   color: indianred;
   border-color: indianred;
@@ -35,7 +42,6 @@
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus
 {
   background-color: transparent;
-  border: white 2px solid; 
 }
 .background_image_row{
   position: relative;
@@ -148,11 +154,24 @@ img{
 .button:hover{
   background-color: #ff9279;
 }
+#topPart{
+    background: url("../images/penielBanner.jpg") no-repeat center center;
+    height: 255px; 
+}
+#info{
+    text-align: center; 
+    padding-top: 7em;
+    padding-bottom: 7em;
+}
+.subtitle{
+    font-weight: 600;
+    margin-bottom: 1em; 
+}
 h1, h2, h3, h6{
   text-transform: uppercase;
 }
 .title{
-  color: #1b81e5;
+  color: black;
   overflow: hidden;
   position: relative;
 }

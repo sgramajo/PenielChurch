@@ -1,5 +1,5 @@
 app.controller('aboutCtrl', function($scope, $location) {
-    $scope.pastors = [{"id": 1, "name": "Senior Pastors Luis and Marta Lopez", "img":"../images/pastor2.jpg"}, 
+    $scope.pastors = [{"id": 1, "name": "Senior Pastors Luis and Marta Lopez", "img":"../images/pastor2.jpg", "stmt": "Bienvenido a la Iglesia Cristiana Peniel, nuestro propósito es bendecirle y lograr que usted encuentre su lugar con Dios, sirviéndole y disfrutando de su presencia y poder. Le invito a que pueda experimentar de Dios en los servicios de adoración, los Domingos a las 11 AM en el santuario, o que se integre a alguno de los muchos grupos que la congregación tiene diseminados por toda el área y casi todos los días de la semana. Allí encontrará personas como usted que se alientan y animan cada semana a seguir adelante en la vida espiritual, tan sólo conéctese para averiguar cuál es el más cercano a usted. Como Pastor Principal, le bendigo y le animo que se acerque a Dios y disfrute de la congregación Peniel con toda la intensidad que pueda tener la pasión por amar a Jesús."}, 
     {"id": 2, "name": "Co-Pastors Joel and Francis Garcia", "img":"../images/DSCF1543.jpg", "stmt": ""}, 
     {"id": 3, "name": "Administrative Pastors Isaac and Kelly Rivera", "img":"../images/DSCF1538.jpg", "stmt": "May God bless you in abundance with all the blessings God has poured out for you in response to your faithfulness!! My name is Pastor Isaac, the adminstrative Pastor, joined by my wife Pastor Kelly. It has been a blessing to experience all of the great moments of abundance that each member of Peniel has obtained and we look forward to YOURS! God has placed us in his path of Revival for a great purpose and we cannot do it without each of you or your faithfulness. Bless as God has blessed you, with what you have and you will see his wonders fulfill his promise to your hearts desire. He knows what you need, Trust in him and he will be faithful. Remember, 'The will of God will never take you, where the grace of God cannot protect you' Blessing"}, 
     {"id": 4, "name": "Education Pastors Kelvin and Daphne Garcia", "img":"../images/DSCF1533.jpg", "stmt": ""}, 
@@ -13,16 +13,20 @@ app.controller('aboutCtrl', function($scope, $location) {
                     return true; 
             }
             return topic === sectionName;  
-    }; 
-    $scope.changeStmts = function(id){
-        if($scope.pastors[id].stmt != "")
-        {
-                $scope.stmts = $scope.pastors[id].stmt; 
-        }
-        else
-        {
-                $scope.stmts = ""; 
-        }
-    }; 
+    };  
 });
 
+/*Directives- */
+app.directive('popover', function () {
+    return {
+        restrict:'A',
+        scope: { item: '=popover' },
+        link: function(scope, element, attrs){
+            scope.$watch('item', function(item) {              
+                $(element).popover({ 
+                    content: item.tooltip
+                });
+            });
+        }
+    }
+})

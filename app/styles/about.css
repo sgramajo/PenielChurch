@@ -13,11 +13,15 @@
     text-align: center; 
     margin-bottom: 30px; 
 }
-.pastorImage {
-    height: 200px; 
+.img-rounded{
+    min-width: 210px;
+    max-width: 210px;
+    width: 210px;
+    height: 165px;
+    min-height: 165px;
+    max-height: 165px; 
 }
 figure > img{
-    width: 300px; 
     display: block;
     margin: 0 auto;
 }
@@ -46,4 +50,12 @@ div figure:first-child {
     width: 90%;
     display:block;
     margin: auto;  
+}
+figure:focus, div.ng-isolate-scope:focus{
+    border: none; 
+    outline: none !important; 
+}
+.popover{
+    max-width: 450px !important;
+    width: 450px; 
 }
