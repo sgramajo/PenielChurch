@@ -171,9 +171,12 @@ h1, h2, h3, h6{
   text-transform: uppercase;
 }
 .title{
-  color: black;
+  color: white;
   overflow: hidden;
   position: relative;
+  font-weight: 600;
+  font-size: 40px;
+  padding-top: 2.2em; 
 }
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
 blockquote, pre, a, abbr, acronym, address, big, cite, code, em, font,

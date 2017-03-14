@@ -1,10 +1,39 @@
 <!-- pictures of the pastors--> 
-<h2 class="title title_regular" style="margin-bottom: 1em" translate="PASTORS"></h2>
-<figure ng-style="$first && {'margin-bottom':'0'}" class="figure col-sm-4" ng-repeat="item in pastors">
-    <div popover="item" tabindex="0" style="cursor: pointer" data-toggle="popover" data-trigger="focus" data-content="{{item.stmt}}" ng-if="item.stmt">
-        <img src="{{item.img}}" class="figure-img img-fluid img-rounded" alt="A placeholder image">
-        <figcaption class="figure-caption" ng-cloak>{{item.name}}</figcaption>
+<h2 class="title_regular" style="margin-bottom: 1em" translate="PASTORS"></h2>
+<figure style='margin-bottom:0' class="figure col-sm-4">
+    <div popover="item" tabindex="0" style="cursor: pointer" data-toggle="popover" data-trigger="focus" data-content="{{ 'PASTORLUIS' | translate }}">
+        <img src="../images/pastor2.jpg" class="figure-img img-fluid img-rounded" alt="A placeholder image">
+        <figcaption class="figure-caption">Senior Pastors Luis and Marta Lopez</figcaption>
     </div>
-    <img ng-if="!item.stmt" src="{{item.img}}" class="figure-img img-fluid img-rounded" alt="A placeholder image">
-    <figcaption ng-if="!item.stmt" class="figure-caption" ng-cloak>{{item.name}}</figcaption>
+</figure>
+
+<figure class="figure col-sm-4">
+    <img src="../images/DSCF1543.jpg" class="figure-img img-fluid img-rounded" alt="A placeholder image">
+    <figcaption class="figure-caption">Co-Pastors Joel and Francis Garcia</figcaption>
+</figure>
+
+<figure class="figure col-sm-4">
+    <div popover="item" tabindex="0" style="cursor: pointer" data-toggle="popover" data-trigger="focus" data-content="{{ 'PASTORISSAC' | translate }}">
+        <img src="../images/DSCF1538.jpg" class="figure-img img-fluid img-rounded" alt="A placeholder image">
+        <figcaption class="figure-caption">Administrative Pastors Isaac and Kelly Rivera</figcaption>
+    </div>
+</figure>
+
+<figure class="figure col-sm-4">
+    <img src="../images/DSCF1533.jpg" class="figure-img img-fluid img-rounded" alt="A placeholder image">
+    <figcaption class="figure-caption">Education Pastors Kelvin and Daphne Garcia</figcaption>
+</figure>
+
+<figure class="figure col-sm-4">
+    <div popover="item" tabindex="0" style="cursor: pointer" data-toggle="popover" data-trigger="focus" data-content="{{ 'PASTORDANNY' | translate }}">
+        <img src="../images/DSCF1530.jpg" class="figure-img img-fluid img-rounded" alt="A placeholder image">
+        <figcaption class="figure-caption">Youth Pastors Danny and Jennifer Ortiz</figcaption>
+    </div>
+</figure>
+
+<figure class="figure col-sm-4">
+    <div popover="item" tabindex="0" style="cursor: pointer" data-toggle="popover" data-trigger="focus" data-content="{{ PASTORJAMES | translate }}">
+        <img src="../images/DSCF1531.jpg" class="figure-img img-fluid img-rounded" alt="A placeholder image">
+        <figcaption class="figure-caption">Small Group Pastors James and Nathasha Garcia</figcaption>
+    </div>
 </figure>
