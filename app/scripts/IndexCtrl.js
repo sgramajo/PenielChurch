@@ -29,7 +29,7 @@ app.controller('NavCtrl', function($scope, $timeout, QueueService, $translate) {
       
       //slideshow
         var INTERVAL = 3000,
-        slides = [{id:"image00", src:"./images/peniel.jpg"}];//, {id:"image01", src:"../images/vbs.jpg"}]; 
+        slides = [{id:"image00", src:"./images/anniversityBanner.jpg"}];//, {id:"image01", src:"../images/vbs.jpg"}]; 
         
         function setCurrentSlideIndex(index) {
                 $scope.currentIndex = index;
