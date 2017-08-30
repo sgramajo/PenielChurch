@@ -167,7 +167,7 @@ app.config(['$translateProvider', function ($translateProvider){
         'GIVE': "Da en Línea",
         GIVENOW: "Da Ahora",
         'CONNECT': "Conéctese con Nosotros Socialmente", 
-        SUMMARY: "La Iglesia Cristiana Peniel es un iglesia unida que se enfoca en predicar el evangelio de Jesucristo a los naciones. Estamos unidos bajo una visión-AVIVAMIENTO-con los pastores, Rev. Dr.Luis López y Rev. Marta Lopez.", 
+        SUMMARY: "La Iglesia Cristiana Peniel es un iglesia unida que se enfoca en predicar el evangelio de Jesucristo a las naciones. Estamos unidos bajo una visión-AVIVAMIENTO-con los pastores, Rev. Dr.Luis López y Rev. Marta Lopez.", 
         BUTTON_TEXT_EN: 'Inglés',
         BUTTON_TEXT_ESP: 'Español',
         CONTACT: 'INFORMACION DE CONTACTO', 
